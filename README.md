@@ -16,7 +16,7 @@
 
 - `Next.js`는 SSR을 쉽게 구현하도록 도와주는 프레임 워크입니다.
   검색엔진 (SEO) 노출의 필요성과 서버 캐싱 적용으로 인한 사용자 경험 개선 때문에 선택했습니다.
-  SSR과 CSR 서로의 단점들을 보완하여 검색엔진(SEO)을 위해 Pre-Rendering, SSR, Code Spliiting을 해결해 주며 SSR with Hydration 기법으로 React + Next.js 처음에는 SSR을 적용하고, 그 후엔 다른 페이지들에선 CSR을 이용하는 방식입니다.
+  SSR과 CSR 서로의 장점을 이용하여 검색엔진(SEO)을 위해 Pre-Rendering, SSR, Code Spliiting을 해결해 주며 SSR with Hydration 기법으로 React + Next.js 처음에는 SSR을 적용하고, 그 후 사용자가 페이지와 상호작용 할 때는 CSR을 이용하는 방식입니다.
 
 <br>
 

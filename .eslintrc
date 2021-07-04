@@ -1,11 +1,21 @@
 {
   "plugins": ["react-hooks"],
   "rules": {
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-console": "off",
+    "no-underscore-dangle": "off",
     "import/no-anonymous-default-export": [2, { "allowArray": true }],
+    "implicit-arrow-linebreak": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/display-name": "off",
-    "react/no-children-prop": "off"
+    "react/no-children-prop": "off",
+    "object-curly-newline": "off",
+    "linebreak-style": "off"
   },
-  "extends": ["next", "next/core-web-vitals"]
+  "extends": ["airbnb", "next", "next/core-web-vitals"]
 }

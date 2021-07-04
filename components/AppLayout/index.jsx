@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { useRouter } from 'next/router';
 import {
   Section,
   HeaderLeftColumn,
@@ -20,7 +21,6 @@ import {
   SNS,
   UpBig,
 } from './styles';
-import { useRouter } from 'next/router';
 
 const AppLayout = ({ children }) => {
   const [showNavMenu, setShowNavMenu] = useState(false);
@@ -73,21 +73,12 @@ const AppLayout = ({ children }) => {
         <Header>
           <Container>
             <ToggleMenuButton show={showNavMenu} onClick={toggleNavMenu}>
-              <FontAwesomeIcon
-                className="menu-button"
-                icon={faBars}
-                size="2x"
-              />
+              <FontAwesomeIcon className="menu-button" icon={faBars} size="2x" />
             </ToggleMenuButton>
             <HeaderLeftColumn>
               <Link exact href="/" prefetch={false}>
                 <a>
-                  <Image
-                    src="/images/logo.png"
-                    alt="MolyMath"
-                    width={64}
-                    height={44}
-                  />
+                  <Image src="/images/logo.png" alt="MolyMath" width={64} height={44} />
                 </a>
               </Link>
             </HeaderLeftColumn>
@@ -104,44 +95,26 @@ const AppLayout = ({ children }) => {
                 </li>
                 <li>
                   <Link href="/profile" prefetch={false}>
-                    <a
-                      className={
-                        router.pathname === '/profile' ? 'active' : undefined
-                      }
-                    >
-                      About
-                    </a>
+                    <a className={router.pathname === '/profile' ? 'active' : undefined}>About</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/portfolio" prefetch={false}>
-                    <a
-                      className={
-                        router.pathname === '/portfolio' ? 'active' : undefined
-                      }
-                    >
+                    <a className={router.pathname === '/portfolio' ? 'active' : undefined}>
                       Portfolio
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/books" prefetch={false}>
-                    <a
-                      className={
-                        router.pathname === '/books' ? 'active' : undefined
-                      }
-                    >
-                      Books
-                    </a>
+                    <a className={router.pathname === '/books' ? 'active' : undefined}>Books</a>
                   </Link>
                 </li>
               </Menus>
             </NavContainer>
           </>
         )}
-        {showBackground && (
-          <BackGround show={showBackground} onClick={toggleNavMenu} />
-        )}
+        {showBackground && <BackGround show={showBackground} onClick={toggleNavMenu} />}
 
         <MainContainer>{children}</MainContainer>
 
@@ -149,11 +122,7 @@ const AppLayout = ({ children }) => {
           <SNS>
             <Link href="mailto:wdudtlrw78@gmail.com" prefetch={false}>
               <a>
-                <FontAwesomeIcon
-                  className="instagram"
-                  icon={faEnvelope}
-                  size="lg"
-                />
+                <FontAwesomeIcon className="instagram" icon={faEnvelope} size="lg" />
               </a>
             </Link>
             <Link href="https://github.com/wdudtlrw78" prefetch={false}>
@@ -164,11 +133,7 @@ const AppLayout = ({ children }) => {
 
             <Link href="https://www.instagram.com/mosik_2" prefetch={false}>
               <a target="_blank" rel="noreferrer noopener" tel="github">
-                <FontAwesomeIcon
-                  className="instagram"
-                  icon={faInstagram}
-                  size="lg"
-                />
+                <FontAwesomeIcon className="instagram" icon={faInstagram} size="lg" />
               </a>
             </Link>
           </SNS>

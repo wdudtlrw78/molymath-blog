@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 import AppLayout from '../../../components/AppLayout';
 import getAllPosts from '../../../lib/data';
 import PostCard from '../../../components/PostCard';
-import { ListSectionTitle } from '../../index';
 import DetailNavMenu from '../../../components/DetailNavMenu';
 
 const IsCategory = ({ posts }) => {
@@ -33,9 +32,7 @@ const IsCategory = ({ posts }) => {
 
         {posts.map(
           (post) =>
-            navMenu === post.category && (
-              <PostCard key={post.title} post={post} {...post} />
-            )
+            navMenu === post.category && <PostCard key={post.title} post={post} {...post} />,
         )}
       </AppLayout>
     </>

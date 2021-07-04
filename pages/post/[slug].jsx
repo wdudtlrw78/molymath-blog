@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import dayjs from 'dayjs';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import gfm from 'remark-gfm';
@@ -17,7 +18,6 @@ import {
   Meta,
   Title,
 } from '../../components/PostCard/styles';
-import { useRouter } from 'next/router';
 
 export default function Blog({ title, content, category, date }) {
   const source = content.replace(/\r\n/gi, '\n &nbsp;');
@@ -59,18 +59,15 @@ export default function Blog({ title, content, category, date }) {
           components={{
             source,
             a: (props) => {
-              if (props.href.match('http')) {
+              const { href, children } = props;
+              if (href.match('http')) {
                 return (
-                  <a
-                    href={props.href}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    {props.children}
+                  <a href={href} target="_blank" rel="noreferrer noopener">
+                    {children}
                   </a>
                 );
               }
-              return <a href={props.href}>{props.children}</a>;
+              return <a href={href}>{children}</a>;
             },
             p: (paragraph) => {
               const { node } = paragraph;
@@ -98,7 +95,7 @@ export default function Blog({ title, content, category, date }) {
                 );
               }
               // Return default child if it's not an image
-              return <p>{paragraph.children}</p>;
+              return <p>{node.children}</p>;
             },
             code({ className, children }) {
               const language = className.replace('language-', '');

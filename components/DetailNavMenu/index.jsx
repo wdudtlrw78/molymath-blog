@@ -1,9 +1,9 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React from 'react';
 import Link from 'next/dist/client/link';
 import styled from '@emotion/styled';
-import PropTypes, { func } from 'prop-types';
-import navData from '../../lib/navData';
+import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
+import navData from '../../lib/navData';
 
 export const NavContainer = styled.nav`
   width: 100%;
@@ -69,12 +69,7 @@ const DetailNavMenu = ({ posts }) => {
             <a className={navMenu === menu.category ? 'active' : undefined}>
               {menu.category}
               <CountBox>
-                <Count>
-                  {
-                    posts.filter((post) => menu.category === post.category)
-                      .length
-                  }
-                </Count>
+                <Count>{posts.filter((post) => menu.category === post.category).length}</Count>
               </CountBox>
             </a>
           </Link>

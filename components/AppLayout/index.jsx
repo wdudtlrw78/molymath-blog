@@ -104,21 +104,33 @@ const AppLayout = ({ children }) => {
                 </li>
                 <li>
                   <Link href="/profile" prefetch={false}>
-                    <a className={router.pathname === '/profile' && 'active'}>
+                    <a
+                      className={
+                        router.pathname === '/profile' ? 'active' : undefined
+                      }
+                    >
                       About
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/portfolio" prefetch={false}>
-                    <a className={router.pathname === '/portfolio' && 'active'}>
+                    <a
+                      className={
+                        router.pathname === '/portfolio' ? 'active' : undefined
+                      }
+                    >
                       Portfolio
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/books" prefetch={false}>
-                    <a className={router.pathname === '/books' && 'active'}>
+                    <a
+                      className={
+                        router.pathname === '/books' ? 'active' : undefined
+                      }
+                    >
                       Books
                     </a>
                   </Link>

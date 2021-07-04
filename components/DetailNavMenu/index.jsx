@@ -55,7 +55,7 @@ const DetailNavMenu = ({ posts }) => {
     <NavContainer>
       <li>
         <Link href="/" prefetch={false}>
-          <a className={router.pathname === '/' && 'active'}>
+          <a className={router.pathname === '/' ? 'active' : undefined}>
             All
             <CountBox>
               <Count>{posts.length}</Count>
@@ -66,7 +66,7 @@ const DetailNavMenu = ({ posts }) => {
       {navData.map((menu) => (
         <li key={menu.category}>
           <Link href={`/category/${menu.category}`} prefetch={false}>
-            <a className={navMenu === menu.category && 'active'}>
+            <a className={navMenu === menu.category ? 'active' : undefined}>
               {menu.category}
               <CountBox>
                 <Count>

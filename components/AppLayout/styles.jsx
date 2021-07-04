@@ -1,9 +1,7 @@
-import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 export const Section = styled.section`
   max-width: 1600px;
-  height: 1400px;
   margin: 0px auto;
 
   @media (min-width: 1340px) {
@@ -122,9 +120,9 @@ export const NavContainer = styled.nav`
   position: fixed;
   top: 0;
   width: 180px;
+  height: 100vh;
   padding-left: 16px;
   background: #fff;
-  height: 100vh;
   z-index: 100;
   overflow: auto;
 

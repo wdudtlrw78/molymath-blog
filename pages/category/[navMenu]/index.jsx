@@ -30,7 +30,7 @@ const IsCategory = ({ posts }) => {
           Tag
         </p>
         <DetailNavMenu posts={posts} />
-        <ListSectionTitle>{navMenu}</ListSectionTitle>
+
         {posts.map(
           (post) =>
             navMenu === post.category && (

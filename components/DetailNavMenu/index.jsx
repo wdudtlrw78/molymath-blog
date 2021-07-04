@@ -10,6 +10,7 @@ export const NavContainer = styled.nav`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   list-style: none;
+  margin-bottom: 56px;
 
   & li {
     display: flex;

@@ -29,9 +29,17 @@ export default function Home({ posts }) {
         <title>MolyMath</title>
       </Head>
       <AppLayout>
-        <p style={{ color: '#e96900', textAlign: 'center', fontSize: '16px', fontWeight: '500' }}>Tag</p>
+        <p
+          style={{
+            color: '#e96900',
+            textAlign: 'center',
+            fontSize: '16px',
+            fontWeight: '500',
+          }}
+        >
+          Tag
+        </p>
         <DetailNavMenu posts={posts} />
-        <ListSectionTitle>All</ListSectionTitle>
         {posts.map((post) => (
           <PostCard key={post.title} post={post} {...post} />
         ))}

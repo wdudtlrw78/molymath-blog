@@ -34,14 +34,8 @@ export default function Blog({ title, content, category, date }) {
         <meta name="description" content={content} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={content} />
-        <meta
-          property="og:image"
-          content="https://molymath.vercel.app/favicon.ico"
-        />
-        <meta
-          property="og:url"
-          content={`https://molymath.vercel.app/post/${navMenu}`}
-        />
+        <meta property="og:image" content="https://molymath.vercel.app/favicon.ico" />
+        <meta property="og:url" content={`https://molymath.vercel.app/post/${navMenu}`} />
       </Head>
       <AppLayout>
         <Meta style={{ marginBottom: '32px', cursor: 'unset' }}>
@@ -59,24 +53,21 @@ export default function Blog({ title, content, category, date }) {
           components={{
             source,
             a: (props) => {
-              const { href, children } = props;
-              if (href.match('http')) {
+              if (props.href.match('http')) {
                 return (
-                  <a href={href} target="_blank" rel="noreferrer noopener">
-                    {children}
+                  <a href={props.href} target="_blank" rel="noreferrer noopener">
+                    {props.children}
                   </a>
                 );
               }
-              return <a href={href}>{children}</a>;
+              return <a href={props.href}>{props.children}</a>;
             },
             p: (paragraph) => {
               const { node } = paragraph;
               if (node.children[0].tagName === 'img') {
                 const image = node.children[0];
                 const alt = image.properties.alt?.replace(/ *\{[^)]*\} */g, '');
-                const isPriority = image.properties.alt
-                  ?.toLowerCase()
-                  .includes('{priority}');
+                const isPriority = image.properties.alt?.toLowerCase().includes('{priority}');
                 const metaWidth = image.properties.alt.match(/{([^}]+)x/);
                 const metaHeight = image.properties.alt.match(/x([^}]+)}/);
                 const width = metaWidth ? metaWidth[1] : '768';
@@ -95,7 +86,7 @@ export default function Blog({ title, content, category, date }) {
                 );
               }
               // Return default child if it's not an image
-              return <p>{node.children}</p>;
+              return <p>{paragraph.children}</p>;
             },
             code({ className, children }) {
               const language = className.replace('language-', '');

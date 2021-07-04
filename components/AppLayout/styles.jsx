@@ -102,6 +102,8 @@ export const HeaderLeftColumn = styled.div`
   margin-left: 16px;
   width: 48px;
 
+  padding-top: 6px;
+
   & a {
     width: 100%;
     height: 100%;
@@ -184,6 +186,10 @@ export const MainContainer = styled.main`
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
+
+    & p {
+      padding: 0 8px;
+    }
   }
 `;
 

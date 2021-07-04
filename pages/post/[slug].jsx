@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import PropTypes, { func } from 'prop-types';
+import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import dayjs from 'dayjs';
 import Image from 'next/image';
@@ -17,9 +17,14 @@ import {
   Meta,
   Title,
 } from '../../components/PostCard/styles';
+import { useRouter } from 'next/router';
 
 export default function Blog({ title, content, category, date }) {
   const source = content.replace(/\r\n/gi, '\n &nbsp;');
+
+  const router = useRouter();
+  const { navMenu } = router.query;
+
   return (
     <>
       <Head>
@@ -29,11 +34,17 @@ export default function Blog({ title, content, category, date }) {
         <meta name="description" content={content} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={content} />
-        {/* <meta property="og:image" content="https://nodebird.com/favicon.ico" />
-        <meta property="og:url" content={`https://nodebird.com/post/${id}`} /> */}
+        <meta
+          property="og:image"
+          content="https://molymath.vercel.app/favicon.ico"
+        />
+        <meta
+          property="og:url"
+          content={`https://molymath.vercel.app/post/${navMenu}`}
+        />
       </Head>
       <AppLayout>
-        <Meta style={{ marginBottom: '32px' }}>
+        <Meta style={{ marginBottom: '32px', cursor: 'unset' }}>
           <AarticleContainer style={{ marginBottom: '10px' }}>
             <Title>{title}</Title>
           </AarticleContainer>

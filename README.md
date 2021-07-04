@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MolyMath DevLog
 
-## Getting Started
+## Stack
 
-First, run the development server:
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
+### Tech
+
+- Next.Js(SSR)
+- React Hooks
+- Emotion
+- React-markdown
+- Vercel
+
+<br>
+
+### 선택 이유
+
+- `React`는 SPA이며, App과 비슷하게 화면 이동 시 깜빡임 없이 자연스럽게 넘어가는 방식이어서 사용자 경험을 개선하며, 데이터와 화면을 자동으로 일치와 더불어 유지 보수와 재사용을 위한 Component를 구성할 수 있습니다. 뷰와 앵귤러도 같은 SPA인데 왜 리액트를 선택한 이유는 npm trends에서 통계를 비교해보면 리액트가 높은 것을 보실 수 있습니다. 시장성을 무시 못 하기 때문에 많은 기업들이 찾음과 동시에 자료도 방대하기 때문에 선택했습니다.
+
+- `Next.js`는 SSR을 쉽게 구현하도록 도와주는 프레임 워크입니다.
+  검색엔진 (SEO) 노출의 필요성과 서버 캐싱 적용으로 인한 사용자 경험 개선 때문에 선택했습니다.
+  SSR과 CSR 서로의 단점들을 보완하여 검색엔진(SEO)을 위해 Pre-Rendering, SSR, Code Spliiting을 해결해 주며 SSR with Hydration 기법으로 React + Next.js 처음에는 SSR을 적용하고, 그 후엔 다른 페이지들에선 CSR을 이용하는 방식입니다.
+
+<br>
+
+## ProtoType
+
+https://www.figma.com/proto/3JmgbuLpka5ZecDH9sJa41/Prototyping-in-Figma?node-id=207%3A2980&scaling=scale-down&page-id=0%3A1
+
+<br>
+
+## Frontmatter
+
+```h
+---
+title: '이벤트 위임'
+category: 'JavaScript'
+date: '2021-07-03T16:27:27.155Z'
+description: '이벤트 기초'
+---
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

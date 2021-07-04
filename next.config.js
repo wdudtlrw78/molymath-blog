@@ -8,4 +8,6 @@ module.exports = {
     });
     return config;
   },
+
+  cacheDirectories: ['node_modules/', '.next/cache/'],
 };

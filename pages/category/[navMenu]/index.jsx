@@ -8,7 +8,7 @@ import PostCard from '../../../components/PostCard';
 import { ListSectionTitle } from '../../index';
 import DetailNavMenu from '../../../components/DetailNavMenu';
 
-const isCategory = ({ posts }) => {
+const IsCategory = ({ posts }) => {
   const router = useRouter();
   const { navMenu } = router.query;
   return (
@@ -19,16 +19,30 @@ const isCategory = ({ posts }) => {
         <title>{navMenu} | MolyMath</title>
       </Head>
       <AppLayout>
-        <p style={{ color: '#e96900', textAlign: 'center', fontSize: '16px', fontWeight: '500' }}>Tag</p>
+        <p
+          style={{
+            color: '#e96900',
+            textAlign: 'center',
+            fontSize: '16px',
+            fontWeight: '500',
+          }}
+        >
+          Tag
+        </p>
         <DetailNavMenu posts={posts} />
         <ListSectionTitle>{navMenu}</ListSectionTitle>
-        {posts.map((post) => navMenu === post.category && <PostCard key={post.title} post={post} {...post} />)}
+        {posts.map(
+          (post) =>
+            navMenu === post.category && (
+              <PostCard key={post.title} post={post} {...post} />
+            )
+        )}
       </AppLayout>
     </>
   );
 };
 
-export default isCategory;
+export default IsCategory;
 
 export async function getStaticProps() {
   const allPosts = getAllPosts();
@@ -55,6 +69,6 @@ export async function getStaticPaths() {
   };
 }
 
-isCategory.propTypes = {
+IsCategory.propTypes = {
   posts: PropTypes.array.isRequired,
 };

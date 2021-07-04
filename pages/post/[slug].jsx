@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
+import PropTypes, { func } from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import dayjs from 'dayjs';
 import Image from 'next/image';
@@ -18,7 +18,7 @@ import {
   Title,
 } from '../../components/PostCard/styles';
 
-const Blog = ({ title, content, category, date }) => {
+export default function Blog({ title, content, category, date }) {
   const source = content.replace(/\r\n/gi, '\n &nbsp;');
   return (
     <>
@@ -50,7 +50,11 @@ const Blog = ({ title, content, category, date }) => {
             a: (props) => {
               if (props.href.match('http')) {
                 return (
-                  <a href={props.href} target="_blank" rel="noreferrer noopener">
+                  <a
+                    href={props.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
                     {props.children}
                   </a>
                 );
@@ -62,7 +66,9 @@ const Blog = ({ title, content, category, date }) => {
               if (node.children[0].tagName === 'img') {
                 const image = node.children[0];
                 const alt = image.properties.alt?.replace(/ *\{[^)]*\} */g, '');
-                const isPriority = image.properties.alt?.toLowerCase().includes('{priority}');
+                const isPriority = image.properties.alt
+                  ?.toLowerCase()
+                  .includes('{priority}');
                 const metaWidth = image.properties.alt.match(/{([^}]+)x/);
                 const metaHeight = image.properties.alt.match(/x([^}]+)}/);
                 const width = metaWidth ? metaWidth[1] : '768';
@@ -85,7 +91,13 @@ const Blog = ({ title, content, category, date }) => {
             },
             code({ className, children }) {
               const language = className.replace('language-', '');
-              return <SyntaxHighlighter style={materialDark} language={language} children={children[0]} />;
+              return (
+                <SyntaxHighlighter
+                  style={materialDark}
+                  language={language}
+                  children={children[0]}
+                />
+              );
             },
           }}
           remarkPlugins={[gfm]}
@@ -95,9 +107,7 @@ const Blog = ({ title, content, category, date }) => {
       </AppLayout>
     </>
   );
-};
-
-export default Blog;
+}
 
 export async function getStaticProps(context) {
   const { params } = context;
@@ -119,7 +129,7 @@ export async function getStaticPaths() {
         slug: post.slug,
       },
     })),
-    fallback: true,
+    fallback: false,
   };
 }
 

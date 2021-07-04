@@ -1,10 +1,6 @@
 # MolyMath DevLog
 
-## Stack
-
-<br>
-
-### Tech
+## Tech
 
 - Next.Js(SSR)
 - React Hooks

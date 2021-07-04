@@ -3,7 +3,14 @@ import Link from 'next/link';
 
 export default function NotFoundPag() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '80vh',
+      }}
+    >
       <div style={{ textAlign: 'center' }}>
         <div>
           <h1>
@@ -12,8 +19,11 @@ export default function NotFoundPag() {
         </div>
         <div>
           <p>Sorry we couldn&apos;t find this page.</p>
-          <p>But don&apos;t worry, you can find plenty of other things on my blog 👀</p>
-          <Link href="/">
+          <p>
+            But don&apos;t worry, you can find plenty of other things on my blog
+            👀
+          </p>
+          <Link href="/" passHref>
             <div
               style={{
                 display: 'inline-block',

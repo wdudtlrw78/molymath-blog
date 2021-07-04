@@ -152,6 +152,11 @@ export const Menus = styled.ul`
     margin-top: 108px;
   }
 
+  .active {
+    font-weight: 400;
+    color: #e96900;
+  }
+
   & a {
     color: #212121;
     text-decoration: none;

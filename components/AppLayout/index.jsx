@@ -20,10 +20,13 @@ import {
   SNS,
   UpBig,
 } from './styles';
+import { useRouter } from 'next/router';
 
 const AppLayout = ({ children }) => {
   const [showNavMenu, setShowNavMenu] = useState(false);
   const [showBackground, setShowBackground] = useState(false);
+
+  const router = useRouter();
 
   const today = new Date();
 
@@ -77,7 +80,7 @@ const AppLayout = ({ children }) => {
               />
             </ToggleMenuButton>
             <HeaderLeftColumn>
-              <Link href="/" prefetch={false}>
+              <Link exact href="/" prefetch={false}>
                 <a>
                   <Image
                     src="/images/logo.png"
@@ -101,17 +104,23 @@ const AppLayout = ({ children }) => {
                 </li>
                 <li>
                   <Link href="/profile" prefetch={false}>
-                    <a>About</a>
+                    <a className={router.pathname === '/profile' && 'active'}>
+                      About
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/portfolio" prefetch={false}>
-                    <a>Portfolio</a>
+                    <a className={router.pathname === '/portfolio' && 'active'}>
+                      Portfolio
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/books" prefetch={false}>
-                    <a>Books</a>
+                    <a className={router.pathname === '/books' && 'active'}>
+                      Books
+                    </a>
                   </Link>
                 </li>
               </Menus>

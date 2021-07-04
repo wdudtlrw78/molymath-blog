@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/dist/client/link';
 import styled from '@emotion/styled';
-import PropTypes from 'prop-types';
+import PropTypes, { func } from 'prop-types';
 import navData from '../../lib/navData';
+import { useRouter } from 'next/router';
 
 export const NavContainer = styled.nav`
   width: 100%;
@@ -16,6 +17,11 @@ export const NavContainer = styled.nav`
     align-items: center;
     padding-top: 12px;
     padding-bottom: 20px;
+  }
+
+  .active {
+    font-weight: 500;
+    color: #e96900;
   }
 
   & a {
@@ -41,11 +47,14 @@ export const Count = styled.span`
 `;
 
 const DetailNavMenu = ({ posts }) => {
+  const router = useRouter();
+  const { navMenu } = router.query;
+
   return (
     <NavContainer>
       <li>
         <Link href="/" prefetch={false}>
-          <a>
+          <a className={router.pathname === '/' && 'active'}>
             All
             <CountBox>
               <Count>{posts.length}</Count>
@@ -56,10 +65,15 @@ const DetailNavMenu = ({ posts }) => {
       {navData.map((menu) => (
         <li key={menu.category}>
           <Link href={`/category/${menu.category}`} prefetch={false}>
-            <a>
+            <a className={navMenu === menu.category && 'active'}>
               {menu.category}
               <CountBox>
-                <Count>{posts.filter((post) => menu.category === post.category).length}</Count>
+                <Count>
+                  {
+                    posts.filter((post) => menu.category === post.category)
+                      .length
+                  }
+                </Count>
               </CountBox>
             </a>
           </Link>

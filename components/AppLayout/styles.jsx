@@ -179,6 +179,14 @@ export const MainContainer = styled.main`
   margin-top: 104px;
   margin-left: 204px;
 
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-top: 36px;
+  }
+
   @media (max-width: 820px) {
     margin-top: 88px;
     margin-bottom: auto;

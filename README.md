@@ -1,4 +1,4 @@
-# MolyMath DevLog
+# MolyMath Blog
 
 ## Tech
 

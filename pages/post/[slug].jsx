@@ -32,10 +32,12 @@ export default function Blog({ title, content, category, date }) {
         <meta charSet="utf-8" />
         <title>{title} | MolyMath</title>
         <meta name="description" content={content} />
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={`${title} - MolyMath`} />
         <meta property="og:description" content={content} />
-        <meta property="og:image" content="https://molymath.vercel.app/favicon.ico" />
+        <meta property="og:image" content="/images/logo.png" />
         <meta property="og:url" content={`https://molymath.vercel.app/post/${navMenu}`} />
+        <meta property="og:type" content="blog" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <AppLayout>
         <Meta style={{ marginBottom: '32px', cursor: 'unset' }}>

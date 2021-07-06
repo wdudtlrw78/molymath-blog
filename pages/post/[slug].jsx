@@ -37,7 +37,6 @@ export default function Blog({ title, content, category, date }) {
         <meta property="og:image" content="/images/logo.png" />
         <meta property="og:url" content={`https://molymath.vercel.app/post/${navMenu}`} />
         <meta property="og:type" content="blog" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <AppLayout>
         <Meta style={{ marginBottom: '32px', cursor: 'unset' }}>

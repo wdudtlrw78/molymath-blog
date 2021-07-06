@@ -27,6 +27,7 @@ export const NavContainer = styled.nav`
 
   & a {
     display: flex;
+    padding: 10px;
     color: #212121;
     text-decoration: none;
   }

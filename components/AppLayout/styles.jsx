@@ -17,6 +17,8 @@ export const Section = styled.section`
   }
 `;
 
+// HEADER
+
 export const Header = styled.header`
   width: 100%;
   max-width: 100%;
@@ -115,6 +117,8 @@ export const HeaderLeftColumn = styled.div`
   }
 `;
 
+// Navigation
+
 export const NavContainer = styled.nav`
   user-select: none;
   position: fixed;
@@ -160,6 +164,7 @@ export const Menus = styled.ul`
   & a {
     color: #212121;
     text-decoration: none;
+    padding: 10px;
   }
 
   & li {
@@ -174,6 +179,8 @@ export const Menus = styled.ul`
     color: #e96900;
   }
 `;
+
+// Main
 
 export const MainContainer = styled.main`
   margin-top: 104px;
@@ -198,6 +205,8 @@ export const MainContainer = styled.main`
     }
   }
 `;
+
+// Footer
 
 export const Footer = styled.footer`
   display: flex;

@@ -18,11 +18,11 @@ NoSQL(non SQL 또는 non relational) 데이터베이스는 전통적인 관계�
 NoSQL 분류는 다음과 같습니다.
 
 - Wide Columnar Store: 카산드라
-- Document Storer: _MongoDB_
+- Document Store: _MongoDB_
 - Key-Value Store: 다이나모, 레디스
 - Graph Store: Neo4j
 
-## SQLL과 NoSQL 비교
+## SQL과 NoSQL 비교
 
 ![NoSQL 성능 비교 {priority}{536x172}](/images/NoSQL-compare.jpg)
 
@@ -30,7 +30,7 @@ NoSQL 분류는 다음과 같습니다.
 
 성능면과 확장성 면에서는 NoSQL이 SQL보다 우수합니다. 또한 유연하며 복잡성이 낮은것이 특징입니다. 하지만 ACID 트랜잭션(원자성/일관성/고립성/영구성)을 보장받기 위해서는 RDBMS를 쓰는 편이 훨씬 좋습니다. 가령 은행업무나 회사업무같은 중요한 DB는 RDBMS를 쓰는 것을 권장한다고 합니다.
 
-> 결론적으로 SQL, NoSQL 서로 장단점을 알고 사용하는 용도에 따라 선택하면 됩니다.
+> 결론적으로 SQL, NoSQL 서로 장단점을 알고 사용하는 용도에 따라 선택하시면 됩니다.
 
 ## MongoDB 알아보자
 

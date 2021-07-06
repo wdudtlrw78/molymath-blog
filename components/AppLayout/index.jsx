@@ -21,6 +21,7 @@ import {
   SNS,
   UpBig,
 } from './styles';
+import DetailNavMenu from '../DetailNavMenu';
 
 const AppLayout = ({ children }) => {
   const [showNavMenu, setShowNavMenu] = useState(false);
@@ -95,7 +96,7 @@ const AppLayout = ({ children }) => {
                 </li>
                 <li>
                   <Link href="/profile" prefetch={false}>
-                    <a className={router.pathname === '/profile' ? 'active' : undefined}>About</a>
+                    <a className={router.pathname === '/profile' ? 'active' : undefined}>Profile</a>
                   </Link>
                 </li>
                 <li>

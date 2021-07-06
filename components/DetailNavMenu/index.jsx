@@ -30,6 +30,10 @@ export const NavContainer = styled.nav`
     color: #212121;
     text-decoration: none;
   }
+
+  & a:hover {
+    color: #e96900;
+  }
 `;
 
 export const CountBox = styled.div`

@@ -7,13 +7,13 @@ description: 'MongoDB와 SQL vs NoSQL 서로 장단점에 대해 알아보자!!'
 
 ## SQL
 
-SQL(Structured Query Language)은 관계형 데이터베이스 관리 시스템(RDBMS)의 데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어이다. 많은 수의 데이터베이스 관련 프로그램들이 SQL을 표준으로 채택하고 있다. -위키피디아-
+SQL(Structured Query Language)은 관계형 데이터베이스 관리 시스템(RDBMS)의 데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어입니다.
 
 대중적으로 가장 많이 사용되는 Oracle, MySQL 등이 이 범주에 포함됩니다.
 
 ## NoSQL
 
-NoSQL(non SQL 또는 non relational) 데이터베이스는 전통적인 관계형 데이터베이스 보다 덜 제한적인 일관성 모델을 이용하는 데이터의 저장 및 검색을 위한 메커니즘을 제공합니다. NoSQL 데이터베이스는 빅데이터와 실시간 웹 애플리케이션의 상업적 이용에 널리 쓰입니다.
+NoSQL(non SQL 또는 non relational) 데이터베이스는 전통적인 관계형 데이터베이스 보다 덜 제한적인 일관성 모델을 이용하는 데이터의 저장 및 검색을 위한 메커니즘을 제공합니다.
 
 NoSQL 분류는 다음과 같습니다.
 
@@ -34,7 +34,7 @@ NoSQL 분류는 다음과 같습니다.
 
 ## MongoDB 알아보자
 
-mongoDB는 C++ 작성된 오픈소스 **문서지향(Document-Oriented)** 크로스 플랫폼 데이터베이스입니다.
+mongoDB는 필요한 쿼리 제공 및 인덱싱을 활용해 원하는 수준의 확장성과 유연성을 제공하는 문서 데이터베이스입니다. - 공식문서-
 
 ### 1. Document
 
@@ -86,6 +86,7 @@ post와 comment가 있다고 가정해보면 post하나에는 comment가 여러�
 
 참고 자료
 
+- https://www.mongodb.com/
 - https://ko.wikipedia.org/wiki/NoSQL
 - https://velog.io/@thms200/SQL-vs-NoSQL
 - https://poiemaweb.com/mongdb-basics

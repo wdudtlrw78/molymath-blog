@@ -37,8 +37,6 @@ mongoose
   .catch((err) => console.log(err));
 ```
 
-만약 본인만의 mongoDB 서버가 있으시다면 url인자에 _mongodb://username:password@host:port/database_ 를 보내주시면 됩니다.
-
 ## 스키마 생성
 
 ```js

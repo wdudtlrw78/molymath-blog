@@ -2,7 +2,7 @@
 title: 'Mongoose 사용하기'
 category: 'MongoDB'
 date: '2021-07-07T06:42:10.246Z'
-description: 'Mongoose와 Schema에 대해 알아보자!!.'
+description: 'Mongoose와 Schema에 대해 알아보자!!'
 ---
 
 ## mongoose
@@ -82,7 +82,7 @@ app.post('/register', (req, res) => {
 
 # Postman Testing
 
-![postman {priority}{695x471}](/images/postman.jpg)
+![postman {priority}{695x471}](/images/MongoDB/postman.jpg)
 
 ## 스키마 옵션
 

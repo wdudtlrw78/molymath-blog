@@ -24,7 +24,7 @@ NoSQL 분류는 다음과 같습니다.
 
 ## SQL과 NoSQL 비교
 
-![NoSQL 성능 비교 {priority}{536x172}](/images/NoSQL-compare.jpg)
+![NoSQL 성능 비교 {priority}{536x172}](/images/MongoDB/NoSQL-compare.jpg)
 
 출처 : https://ko.wikipedia.org/wiki/NoSQL
 

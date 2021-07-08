@@ -17,7 +17,7 @@ _concurrently_ 라이브러리를 이용하면 한 번에 실행시킬 수 있�
 폴더 구조는
 back 폴더와 front 폴더로 나누어져 있습니다.
 
-![폴더구조 {priority}{418 x 294}](/images/NodeJS/folder.jpg)
+![폴더구조 {priority}{418x294}](/images/NodeJS/folder.jpg)
 
 ## 1. 설치하기
 
@@ -28,7 +28,7 @@ _npm install concurrently --save_
 root 디렉토리(back folder) package.json 의 scripts 부분에 dev 라는 새로운 부분을 추가했습니다.
 concurrently를 사용하고 싶다면 아래 이미지와 같이 앞에 명시해 주고 뒤에 순차적으로 실행시키고 싶은 명령어를 적으시면 됩니다.
 
-![concurrently {priority}{1000 x 200}](/images/NodeJS/packagejson.jpg)
+![concurrently {priority}{1000x200}](/images/NodeJS/packagejson.jpg)
 
 - _"dev": "concurrently \"npm run backend\" \"cd ../front && npm run start\""_
 
@@ -36,4 +36,4 @@ concurrently를 사용하고 싶다면 아래 이미지와 같이 앞에 명시�
 
 ## 3. 실행화면
 
-![run {priority}{611 x 446}](/images/NodeJS/run.JPG)
+![run {priority}{611x446}](/images/NodeJS/run.JPG)

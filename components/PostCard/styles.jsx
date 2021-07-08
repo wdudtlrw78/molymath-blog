@@ -15,7 +15,7 @@ export const Card = styled.section`
   h3,
   h4,
   h5 {
-    margin-top: 36px;
+    margin-top: 24px;
     margin-bottom: 24px;
   }
 `;

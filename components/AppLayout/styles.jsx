@@ -195,7 +195,7 @@ export const MainContainer = styled.main`
   h3,
   h4,
   h5 {
-    margin-top: 24px;
+    margin-top: 36px;
     margin-bottom: 24px;
   }
 
@@ -223,9 +223,11 @@ export const MainContainer = styled.main`
     h4,
     h5 {
       padding: 0 8px;
+      margin-top: 36px;
+      margin-bottom: 24px;
     }
 
-    @media (min-width: 319px) {
+    @media (max-width: 319px) {
       margin-top: 88px;
       margin-bottom: auto;
       margin-left: auto;
@@ -236,7 +238,8 @@ export const MainContainer = styled.main`
       h3,
       h4,
       h5 {
-        margin-top: 24px;
+        padding: 0 8px;
+        margin-top: 36px;
         margin-bottom: 24px;
       }
     }

@@ -36,4 +36,4 @@ concurrently를 사용하고 싶다면 아래 이미지와 같이 앞에 명시�
 
 ## 3. 실행화면
 
-![run {priority}{611 x 446}](/images/NodeJS/run.jpg)
+![run {priority}{611 x 446}](/images/NodeJS/run.JPG)

@@ -24,6 +24,18 @@ export const globalStyles = (
         box-sizing: border-box;
       }
 
+      em {
+        color: #e96900;
+        font-size: 0.875em;
+        background-color: #f8f8f8;
+        padding: 3px 5px;
+        border-radius: 2px;
+      }
+
+      & a {
+        margin: 20px 0;
+      }
+
       & p {
         margin: 20px 0;
         line-height: 1.75;
@@ -56,15 +68,6 @@ export const globalStyles = (
         margin: 0;
         padding-left: 1em;
         border-left: 0.5em #eee solid;
-      }
-
-      em {
-        color: #e96900;
-        font-size: 0.875em;
-        background-color: #f8f8f8;
-        padding: 3px 5px;
-        border-radius: 2px;
-        white-space: nowrap;
       }
     `}
   />

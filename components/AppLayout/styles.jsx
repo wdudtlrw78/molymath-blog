@@ -59,11 +59,13 @@ export const Container = styled.div`
 
   @media (min-width: 1340px) {
     max-width: calc(1356px);
+    margin: 0px auto;
   }
 
   @media (min-width: 820px) {
     max-width: calc(1100px);
     flex-direction: row;
+    margin: 0px auto;
   }
 
   @media (min-width: 320px) {
@@ -132,6 +134,7 @@ export const NavContainer = styled.nav`
 
   & a {
     color: #212121;
+    font-weight: 400;
     text-decoration: none;
   }
 
@@ -185,13 +188,15 @@ export const Menus = styled.ul`
 export const MainContainer = styled.main`
   margin-top: 104px;
   margin-left: 204px;
+  margin-right: auto;
 
   & h1,
   h2,
   h3,
   h4,
   h5 {
-    margin-top: 36px;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 
   @media (max-width: 820px) {
@@ -204,12 +209,36 @@ export const MainContainer = styled.main`
       padding: 0 8px;
     }
 
+    em {
+      color: #e96900;
+      font-size: 0.875em;
+      background-color: #f8f8f8;
+      padding: 3px 5px;
+      border-radius: 2px;
+    }
+
     & h1,
     h2,
     h3,
     h4,
     h5 {
       padding: 0 8px;
+    }
+
+    @media (min-width: 319px) {
+      margin-top: 88px;
+      margin-bottom: auto;
+      margin-left: auto;
+      margin-right: auto;
+
+      & h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
     }
   }
 `;

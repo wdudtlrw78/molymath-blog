@@ -71,8 +71,8 @@ export default function Blog({ title, content, category, date }) {
                 const isPriority = image.properties.alt?.toLowerCase().includes('{priority}');
                 const metaWidth = image.properties.alt.match(/{([^}]+)x/);
                 const metaHeight = image.properties.alt.match(/x([^}]+)}/);
-                const width = metaWidth ? metaWidth[1] : '768';
-                const height = metaHeight ? metaHeight[1] : '768';
+                const width = metaWidth ? metaWidth[1] : '1600';
+                const height = metaHeight ? metaHeight[1] : '1000';
                 return (
                   <div className="image">
                     <Image

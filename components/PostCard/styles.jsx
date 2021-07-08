@@ -2,12 +2,21 @@ import styled from '@emotion/styled';
 
 export const Card = styled.section`
   padding: 0 0 42px;
-  margin: 0 0px 56px;
+  margin: 56px 16px 0 0;
   border-bottom: 1px solid #c0c0c0;
 
   & a {
     color: #212121;
     text-decoration: none;
+  }
+
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-top: 36px;
+    margin-bottom: 24px;
   }
 `;
 
@@ -59,9 +68,9 @@ export const AarticleContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  margin: 0;
+  padding-right: 16px;
 
-  font-size: 48px;
+  font-size: 36px;
 `;
 
 export const Description = styled.p`

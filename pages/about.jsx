@@ -3,20 +3,39 @@ import Head from 'next/head';
 import Link from 'next/link';
 import AppLayout from '../components/AppLayout';
 
-const Profile = () => {
+const About = () => {
   return (
     <>
       <Head>
-        <title>Profile | MolyMath</title>
-        <meta name="description" content="MolyMath Profile" />
-        <meta property="og:title" content="Profile | MolyMath" />
-        <meta property="og:description" content="MolyMath is Profile" />
+        <title>About | MolyMath</title>
+        <meta name="description" content="MolyMath About" />
+        <meta property="og:title" content="About | MolyMath" />
+        <meta property="og:description" content="MolyMath is About" />
         <meta property="og:image" content="/images/logo.png" />
         <meta property="og:url" content={`https://molymath.vercel.app/portfolio`} />
         <meta property="og:type" content="blog" />
       </Head>
       <AppLayout>
-        <p style={{ textAlign: 'center', fontSize: '18px', fontWeight: '500' }}>프로필</p>
+        <h3>Intro</h3>
+        <div>
+          <p>
+            블로그 네이밍은 몰리매스(MolyMath)라고 지었습니다.{' '}
+            <span style={{ color: '#e96900' }}>
+              폴리매스(PolyMath)와 저의 이름 Mo와 합성 형태로
+            </span>
+            <br />
+            <div style={{ margin: '24px 0' }}>
+              <strong>
+                &quot;폴리매스는 박식가, 여러 주제에 대해 광범위하게 알고 있는 사람.
+                <br /> 서로 연관이 없어 보이는 다양한 영역에서 출중한 재능을 발휘하며 방대하고
+                종합적인 사고와 방법론을 지닌 사람&quot; <br />
+                -폴리매스 책 본문에서-
+              </strong>
+            </div>
+            을 의미합니다. 배움의 시대, 개발 이외에도 UX/UI, 책 서평 등 다양한 분야에서 학습하는
+            것을 블로그에 포스팅할 계획입니다.
+          </p>
+        </div>
         <h3 style={{ fontSize: '18px' }}>모영식(MolyMath)</h3>
         <ul style={{ fontSize: '14px' }}>
           <li>1995.08.26</li>
@@ -62,4 +81,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default About;

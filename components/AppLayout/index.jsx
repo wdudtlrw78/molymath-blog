@@ -95,8 +95,8 @@ const AppLayout = ({ children }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/profile" prefetch={false}>
-                    <a className={router.pathname === '/profile' ? 'active' : undefined}>Profile</a>
+                  <Link href="/about" prefetch={false}>
+                    <a className={router.pathname === '/about' ? 'active' : undefined}>About</a>
                   </Link>
                 </li>
                 <li>

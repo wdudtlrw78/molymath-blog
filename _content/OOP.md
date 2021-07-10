@@ -297,3 +297,4 @@ Article.printPublisher();
 - https://ko.javascript.info/
 - https://poiemaweb.com/js-object-oriented-programming
 - https://jeong-pro.tistory.com/95
+- https://www.youtube.com/watch?v=_DLhUBWsRtw&t=92s

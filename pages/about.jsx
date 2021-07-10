@@ -19,7 +19,7 @@ const About = () => {
         <h3>Intro</h3>
         <div>
           <p>
-            블로그 네이밍은 몰리매스(MolyMath)라고 지었습니다.{' '}
+            블로그 이름은 몰리매스(MolyMath)라고 지었습니다.{' '}
             <span style={{ color: '#e96900' }}>
               폴리매스(PolyMath)와 저의 이름 Mo와 합성 형태로
             </span>

@@ -5,7 +5,7 @@ date: '2021-07-10T12:21:35.244Z'
 description: 'OOP (Object Oriented Programming)'
 ---
 
-## 객체 지향 프로그래밍(OOP) 란
+## 객체지향 프로그래밍(Object Oriented Programming) 란
 
 컴퓨터 프로그래밍 패러다임중 하나로, 프로그래밍에서 필요한 데이터를 추상화시켜 상태와 행위를 가진 객체를 만들고 그 객체들 간의 유기적인 상호작용을 통해 로직을 구성하는 프로그래밍 방법입니다.
 

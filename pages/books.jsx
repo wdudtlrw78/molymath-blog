@@ -2,19 +2,17 @@ import React from 'react';
 import Head from 'next/head';
 import AppLayout from '../components/AppLayout';
 import getAllPosts from '../lib/data';
+import { PageSeo } from '../components/SEO';
+import { SiteConfig } from '../config';
 
-const Books = ({ posts }) => {
+const Books = () => {
   return (
     <>
-      <Head>
-        <title>Profile | MolyMath</title>
-        <meta name="description" content="MolyMath Blog" />
-        <meta property="og:title" content="Profile | MolyMath" />
-        <meta property="og:description" content="MolyMath is Profile" />
-        <meta property="og:image" content="/images/logo.png" />
-        <meta property="og:url" content={`https://molymath.vercel.app/profile`} />
-        <meta property="og:type" content="blog" />
-      </Head>
+      <PageSeo
+        title={`Books - ${SiteConfig.title}`}
+        description={SiteConfig.subtitle}
+        url={`${SiteConfig.url}/books`}
+      />
       <AppLayout>
         <div
           style={{

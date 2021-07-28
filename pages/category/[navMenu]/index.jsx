@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
+import { SiteConfig } from '../../../config';
+import { PageSeo } from '../../../components/SEO';
 import { useRouter } from 'next/router';
 import AppLayout from '../../../components/AppLayout';
 import getAllPosts from '../../../lib/data';
@@ -12,11 +14,12 @@ const IsCategory = ({ posts }) => {
   const { navMenu } = router.query;
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
-        <title>{navMenu} | MolyMath</title>
-      </Head>
+      <PageSeo
+        title={navMenu}
+        description={SiteConfig.subtitle}
+        url={`${SiteConfig.url}/category/${navMenu}`}
+      />
+
       <AppLayout>
         <p
           style={{
@@ -62,7 +65,7 @@ export async function getStaticPaths() {
         navMenu: post.data.category,
       },
     })),
-    fallback: false,
+    fallback: 'blocking',
   };
 }
 

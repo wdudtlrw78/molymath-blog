@@ -5,6 +5,11 @@ import { Global, css } from '@emotion/react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import { DefaultSeo } from 'next-seo';
+
+import config from '../config';
+import { SEO } from '../components/SEO';
+import Script from 'next/script';
 
 library.add(fab, far);
 
@@ -78,10 +83,31 @@ const MolyMath = ({ Component, pageProps }) => {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <title>MolyMath</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
+      <DefaultSeo {...SEO} />
       {globalStyles}
       <Component {...pageProps} />
+      {process.env.NODE_ENV === 'production' && (
+        <>
+          <Script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalyticsId}`}
+          />
+          <Script
+            dangerouslySetInnerHTML={{
+              __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', '${config.googleAnalyticsId}', {
+            page_path: window.location.pathname,
+            `,
+            }}
+          />
+        </>
+      )}
     </>
   );
 };

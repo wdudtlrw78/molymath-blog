@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import dayjs from 'dayjs';
@@ -7,6 +6,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+
 import gfm from 'remark-gfm';
 import AppLayout from '../../components/AppLayout';
 import getAllPosts from '../../lib/data';
@@ -18,26 +18,19 @@ import {
   Meta,
   Title,
 } from '../../components/PostCard/styles';
+import { PageSeo } from '../../components/SEO';
+import { SiteConfig } from '../../config';
 
-export default function Blog({ title, content, category, date }) {
+export default function Blog({ slug, title, content, category, date }) {
   const source = content.replace(/\r\n/gi, '\n &nbsp;');
-
-  const router = useRouter();
-  const { navMenu } = router.query;
 
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
-        <title>{title} | MolyMath</title>
-        <meta name="description" content={content} />
-        <meta property="og:title" content={`${title} - MolyMath`} />
-        <meta property="og:description" content={content} />
-        <meta property="og:image" content="/images/logo.png" />
-        <meta property="og:url" content={`https://molymath.vercel.app/post/${navMenu}`} />
-        <meta property="og:type" content="blog" />
-      </Head>
+      <PageSeo
+        title={title}
+        description={SiteConfig.subtitle}
+        url={`${SiteConfig.url}/post/${slug}`}
+      />
       <AppLayout>
         <Meta style={{ marginBottom: '32px', cursor: 'unset' }}>
           <AarticleContainer style={{ marginBottom: '10px' }}>
@@ -112,12 +105,14 @@ export default function Blog({ title, content, category, date }) {
 export async function getStaticProps(context) {
   const { params } = context;
   const allPosts = getAllPosts();
-  const { data, content } = allPosts.find((item) => item.slug === params.slug);
+  const { data, content, slug } = allPosts.find((item) => item.slug === params.slug);
+
   return {
     props: {
       ...data,
       date: data.date,
       content,
+      slug,
     },
   };
 }
@@ -129,11 +124,12 @@ export async function getStaticPaths() {
         slug: post.slug,
       },
     })),
-    fallback: false,
+    fallback: 'blocking',
   };
 }
 
 Blog.propTypes = {
+  slug: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,

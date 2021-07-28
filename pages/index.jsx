@@ -1,6 +1,7 @@
 import React from 'react';
-import Head from 'next/head';
 import PropTypes from 'prop-types';
+import { PageSeo } from '../components/SEO';
+import { SiteConfig } from '../config';
 import AppLayout from '../components/AppLayout';
 import PostCard from '../components/PostCard';
 import getAllPosts from '../lib/data';
@@ -9,11 +10,7 @@ import DetailNavMenu from '../components/DetailNavMenu';
 export default function Home({ posts }) {
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
-        <title>MolyMath</title>
-      </Head>
+      <PageSeo title={'Home'} description={SiteConfig.subtitle} url={SiteConfig.url} />
       <AppLayout>
         <p
           style={{
@@ -34,8 +31,9 @@ export default function Home({ posts }) {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const allPosts = getAllPosts();
+
   return {
     props: {
       posts: allPosts.map(({ data, content, slug }) => ({
@@ -46,7 +44,7 @@ export async function getStaticProps() {
       })),
     },
   };
-}
+};
 
 Home.propTypes = {
   posts: PropTypes.array.isRequired,

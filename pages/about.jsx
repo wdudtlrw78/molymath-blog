@@ -2,19 +2,17 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import AppLayout from '../components/AppLayout';
+import { PageSeo } from '../components/SEO';
+import { SiteConfig } from '../config';
 
 const About = () => {
   return (
     <>
-      <Head>
-        <title>About | MolyMath</title>
-        <meta name="description" content="MolyMath About" />
-        <meta property="og:title" content="About | MolyMath" />
-        <meta property="og:description" content="MolyMath is About" />
-        <meta property="og:image" content="/images/logo.png" />
-        <meta property="og:url" content={`https://molymath.vercel.app/portfolio`} />
-        <meta property="og:type" content="blog" />
-      </Head>
+      <PageSeo
+        title={`About - ${SiteConfig.author.name}`}
+        description={`About me - ${SiteConfig.author.name}`}
+        url={`${SiteConfig.url}/about`}
+      />
       <AppLayout>
         <h3>Intro</h3>
         <div>

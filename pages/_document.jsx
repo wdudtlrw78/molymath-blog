@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="ko">
         <Head>
           <meta property="og:type" content="blog" />
           <meta property="og:locale" content="ko_KR" />

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import dayjs from 'dayjs';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
@@ -18,7 +17,7 @@ import {
   Meta,
   Title,
 } from '../../components/PostCard/styles';
-import { PageSeo } from '../../components/SEO';
+import { BlogSeo } from '../../components/SEO';
 import { SiteConfig } from '../../config';
 
 export default function Blog({ slug, title, content, category, date }) {
@@ -26,10 +25,11 @@ export default function Blog({ slug, title, content, category, date }) {
 
   return (
     <>
-      <PageSeo
+      <BlogSeo
         title={title}
-        description={SiteConfig.subtitle}
-        url={`${SiteConfig.url}/post/${slug}`}
+        summary={content}
+        date={date}
+        url={`${SiteConfig.url}/category/${slug}`}
       />
       <AppLayout>
         <Meta style={{ marginBottom: '32px', cursor: 'unset' }}>

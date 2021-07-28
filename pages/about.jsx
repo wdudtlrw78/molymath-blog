@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import AppLayout from '../components/AppLayout';
 import { PageSeo } from '../components/SEO';

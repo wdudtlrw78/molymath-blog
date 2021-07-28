@@ -7,7 +7,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { DefaultSeo } from 'next-seo';
 
-import config from '../config';
+import { SiteConfig } from '../config';
 import { SEO } from '../components/SEO';
 import Script from 'next/script';
 
@@ -92,7 +92,7 @@ const MolyMath = ({ Component, pageProps }) => {
         <>
           <Script
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalyticsId}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=${SiteConfig.googleAnalyticsId}`}
           />
           <Script
             dangerouslySetInnerHTML={{
@@ -101,7 +101,7 @@ const MolyMath = ({ Component, pageProps }) => {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
         
-          gtag('config', '${config.googleAnalyticsId}', {
+          gtag('config', '${SiteConfig.googleAnalyticsId}', {
             page_path: window.location.pathname,
             `,
             }}

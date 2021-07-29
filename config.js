@@ -7,7 +7,7 @@ export const SiteConfig = {
   subtitle: 'molymath',
   copyright: 'molymath © All rights reserved.',
   disqusShortname: '',
-  googleAnalyticsId: 'G-085HPX7701',
+  googleAnalyticsId: 'G-1DJ35BXMH5',
   useKatex: 'false',
   menu: [
     {

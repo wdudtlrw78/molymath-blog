@@ -1,7 +1,7 @@
 import getContactHref from './constansts/Contact';
 
 export const SiteConfig = {
-  url: 'https://molymath.vercel.app',
+  url: 'https://molymath.kr',
   pathPrefix: '/',
   title: 'molymath',
   subtitle: 'molymath',

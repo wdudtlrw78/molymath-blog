@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
+
 import AppLayout from '../components/AppLayout';
 import { PageSeo } from '../components/SEO';
 import { SiteConfig } from '../config';

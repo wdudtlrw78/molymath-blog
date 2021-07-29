@@ -36,7 +36,7 @@ export default function Blog({ slug, title, content, category, date }) {
         <meta property="og:title" content={`${title} - ${SiteConfig.title}`} />
         <meta property="og:description" content={content} />
         <meta property="og:image" content="/molymath.png" />
-        <meta property="og:url" content={`https://molymath.vercel.app/post/${slug}`} />
+        <meta property="og:url" content={`https://molymath.kr/post/${slug}`} />
         <meta property="og:type" content="blog" />
       </Head>
       <AppLayout>

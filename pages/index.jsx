@@ -4,8 +4,9 @@ import { PageSeo } from '../components/SEO';
 import { SiteConfig } from '../config';
 import AppLayout from '../components/AppLayout';
 import PostCard from '../components/PostCard';
-import getAllPosts from '../lib/data';
+
 import DetailNavMenu from '../components/DetailNavMenu';
+import { getAllPosts } from '../lib/data';
 
 export default function Home({ posts }) {
   return (

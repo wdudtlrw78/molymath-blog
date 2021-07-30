@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Head from 'next/head';
+
 import { SiteConfig } from '../../../config';
 import { PageSeo } from '../../../components/SEO';
 import { useRouter } from 'next/router';

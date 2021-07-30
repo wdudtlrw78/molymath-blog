@@ -6,7 +6,7 @@ import AppLayout from '../components/AppLayout';
 import PostCard from '../components/PostCard';
 
 import DetailNavMenu from '../components/DetailNavMenu';
-import { getAllPosts } from '../lib/data';
+import getAllPosts from '../lib/data';
 
 export default function Home({ posts }) {
   return (

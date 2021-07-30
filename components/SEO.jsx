@@ -34,7 +34,6 @@ export const PageSeo = ({ title, description, url }) => {
           images: [{ alt: title, url: '/molymath.png' }],
         }}
       />
-      <meta name="google-site-verification" content="pk9mHtTQUcYfF6rk5vwTMJz8VCoKG4wxFv1Vv8gWwyQ" />
     </>
   );
 };
@@ -87,7 +86,6 @@ export const BlogSeo = ({ title, summary, date, updatedAt, url, tags, images = [
         url={url}
         publisherLogo={`${SiteConfig.url}/favicon.ico`}
       />
-      <meta name="google-site-verification" content="pk9mHtTQUcYfF6rk5vwTMJz8VCoKG4wxFv1Vv8gWwyQ" />
     </>
   );
 };

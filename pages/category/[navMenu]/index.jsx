@@ -65,7 +65,7 @@ export async function getStaticPaths() {
         navMenu: post.data.category,
       },
     })),
-    fallback: 'blocking',
+    fallback: false,
   };
 }
 

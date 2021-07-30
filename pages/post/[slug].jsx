@@ -20,6 +20,7 @@ import {
 } from '../../components/PostCard/styles';
 import { BlogSeo } from '../../components/SEO';
 import { SiteConfig } from '../../config';
+import markdownToHtml from '../../lib/markdownToHtml';
 
 export default function Blog({ slug, title, content, category, date }) {
   const source = content.replace(/\r\n/gi, '\n &nbsp;');
@@ -115,12 +116,15 @@ export async function getStaticProps(context) {
   const allPosts = getAllPosts();
   const { data, content, slug } = allPosts.find((item) => item.slug === params.slug);
 
+  const contents = await markdownToHtml(allPosts.content || '');
+
   return {
     props: {
       ...data,
       date: data.date,
       content,
       slug,
+      contents,
     },
   };
 }
@@ -132,7 +136,7 @@ export async function getStaticPaths() {
         slug: post.slug,
       },
     })),
-    fallback: 'blocking',
+    fallback: false,
   };
 }
 

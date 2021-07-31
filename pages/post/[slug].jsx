@@ -116,7 +116,7 @@ export async function getStaticProps(context) {
   const allPosts = getAllPosts();
   const { data, content, slug } = allPosts.find((item) => item.slug === params.slug);
 
-  // const contents = await markdownToHtml(allPosts.content || '');
+  const contents = await markdownToHtml(allPosts.content || '');
 
   return {
     props: {
@@ -124,7 +124,7 @@ export async function getStaticProps(context) {
       date: data.date,
       content,
       slug,
-      // contents,
+      contents,
     },
   };
 }

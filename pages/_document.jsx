@@ -28,6 +28,7 @@ class MyDocument extends Document {
             name="google-site-verification"
             content="pk9mHtTQUcYfF6rk5vwTMJz8VCoKG4wxFv1Vv8gWwyQ"
           />
+          <meta name="naver-site-verification" content="e087e2b5413e89d74e997b078525961fa89968a1" />
           <link rel="icon" href="/favicon.ico" />
           <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"

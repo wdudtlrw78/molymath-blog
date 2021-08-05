@@ -5,17 +5,6 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import {
-  Card,
-  Meta,
-  DateAndCategoryContainer,
-  Date,
-  CategoryBox,
-  AarticleContainer,
-  Title,
-  Description,
-} from './styles';
-
 dayjs.locale('ko');
 dayjs.extend(relativeTime);
 
@@ -23,26 +12,26 @@ const PostCard = ({ slug, title, date, category, description }) => {
   const router = useRouter();
   const { navMenu } = router.query;
   return (
-    <Card>
+    <div>
       <Link href={`/post/${slug}`} prefetch={false}>
         <a>
-          <Meta>
-            <DateAndCategoryContainer>
-              <Date>{dayjs(date).format('MMM.DD.YYYY')}</Date>
+          <div>
+            <div>
+              <div>{dayjs(date).format('MMM.DD.YYYY')}</div>
               {navMenu ? null : (
-                <CategoryBox>
+                <div>
                   <span>{category}</span>
-                </CategoryBox>
+                </div>
               )}
-            </DateAndCategoryContainer>
-            <AarticleContainer>
-              <Title>{title}</Title>
-              <Description>{description}</Description>
-            </AarticleContainer>
-          </Meta>
+            </div>
+            <div>
+              <h1>{title}</h1>
+              <div>{description}</div>
+            </div>
+          </div>
         </a>
       </Link>
-    </Card>
+    </div>
   );
 };
 

@@ -7,21 +7,7 @@ import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { useRouter } from 'next/router';
-import {
-  Section,
-  HeaderLeftColumn,
-  NavContainer,
-  ToggleMenuButton,
-  Footer,
-  MainContainer,
-  Header,
-  Container,
-  BackGround,
-  Menus,
-  SNS,
-  UpBig,
-} from './styles';
-import DetailNavMenu from '../DetailNavMenu';
+import SectionContainer from './SectionContainer';
 
 const AppLayout = ({ children }) => {
   const [showNavMenu, setShowNavMenu] = useState(false);
@@ -36,59 +22,31 @@ const AppLayout = ({ children }) => {
     setShowBackground((prev) => !prev);
   }, []);
 
-  useEffect(() => {
-    if (window.innerWidth >= 820) {
-      setShowNavMenu(true);
-      setShowBackground(false);
-    } else {
-      setShowNavMenu(false);
-      setShowBackground(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    function onResize() {
-      if (window.innerWidth >= 820) {
-        setShowNavMenu(true);
-        setShowBackground(false);
-      } else {
-        setShowNavMenu(false);
-        setShowBackground(false);
-      }
-    }
-
-    window.addEventListener('resize', onResize);
-
-    return () => {
-      window.removeEventListener('resize', onResize);
-    };
-  }, []);
-
   const onUpper = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (
-    <div>
-      <Section>
-        <Header>
-          <Container>
-            <ToggleMenuButton show={showNavMenu} onClick={toggleNavMenu}>
+    <>
+      <SectionContainer>
+        <header className="flex">
+          <div>
+            <div show={showNavMenu} onClick={toggleNavMenu}>
               <FontAwesomeIcon className="menu-button" icon={faBars} size="2x" />
-            </ToggleMenuButton>
-            <HeaderLeftColumn>
+            </div>
+            <div>
               <Link exact href="/" prefetch={false}>
                 <a>
-                  <Image src="/molymath.png" alt="MolyMath" width={64} height={44} />
+                  <h1 className="text-s text-main font-bold">MolyMath</h1>
                 </a>
               </Link>
-            </HeaderLeftColumn>
-          </Container>
-        </Header>
+            </div>
+          </div>
+        </header>
         {showNavMenu && (
           <>
-            <NavContainer show={showNavMenu}>
-              <Menus>
+            <nav show={showNavMenu}>
+              <ul>
                 <li>
                   <Link href="/" prefetch={false}>
                     <a>MolyMath</a>
@@ -111,16 +69,16 @@ const AppLayout = ({ children }) => {
                     <a className={router.pathname === '/books' ? 'active' : undefined}>Books</a>
                   </Link>
                 </li>
-              </Menus>
-            </NavContainer>
+              </ul>
+            </nav>
           </>
         )}
-        {showBackground && <BackGround show={showBackground} onClick={toggleNavMenu} />}
+        {showBackground && <div show={showBackground} onClick={toggleNavMenu} />}
 
-        <MainContainer>{children}</MainContainer>
+        <main>{children}</main>
 
-        <Footer>
-          <SNS>
+        <footer>
+          <div>
             <Link href="mailto:wdudtlrw78@gmail.com" prefetch={false}>
               <a>
                 <FontAwesomeIcon className="instagram" icon={faEnvelope} size="lg" />
@@ -137,16 +95,17 @@ const AppLayout = ({ children }) => {
                 <FontAwesomeIcon className="instagram" icon={faInstagram} size="lg" />
               </a>
             </Link>
-          </SNS>
+          </div>
           © {today.getFullYear()} | by molymath
-        </Footer>
-      </Section>
-      <UpBig onClick={onUpper}>
-        <div className="main">
-          <FontAwesomeIcon className="arrow-up" icon={faArrowUp} size="2x" />
+        </footer>
+
+        <div onClick={onUpper}>
+          <div className="main">
+            <FontAwesomeIcon className="arrow-up" icon={faArrowUp} size="2x" />
+          </div>
         </div>
-      </UpBig>
-    </div>
+      </SectionContainer>
+    </>
   );
 };
 

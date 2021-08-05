@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import AppLayout from '../components/AppLayout';
-import getAllPosts from '../lib/data';
+import getAllPosts from '../client/lib/data';
 import { PageSeo } from '../components/SEO';
 import { SiteConfig } from '../config';
 

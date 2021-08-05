@@ -5,7 +5,7 @@ import { SiteConfig } from '../../../config';
 import { PageSeo } from '../../../components/SEO';
 import { useRouter } from 'next/router';
 import AppLayout from '../../../components/AppLayout';
-import getAllPosts from '../../../lib/data';
+import { getAllPosts } from '../../../lib/data';
 import PostCard from '../../../components/PostCard';
 import DetailNavMenu from '../../../components/DetailNavMenu';
 

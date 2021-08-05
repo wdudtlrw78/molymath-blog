@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { PageSeo } from '../components/SEO';
 import { SiteConfig } from '../config';
-import AppLayout from '../components/AppLayout';
+
 import PostCard from '../components/PostCard';
 
 import DetailNavMenu from '../components/DetailNavMenu';
-import getAllPosts from '../lib/data';
+import { getAllPosts } from '../lib/data';
+import AppLayout from '../components/AppLayout';
 
 export default function Home({ posts }) {
   return (
@@ -32,7 +33,7 @@ export default function Home({ posts }) {
   );
 }
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   const allPosts = getAllPosts();
 
   return {
@@ -45,7 +46,7 @@ export const getStaticProps = async () => {
       })),
     },
   };
-};
+}
 
 Home.propTypes = {
   posts: PropTypes.array.isRequired,

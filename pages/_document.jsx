@@ -22,7 +22,7 @@ class MyDocument extends Document {
           <meta name="format-detection" content="telephone=no" />
           <meta name="msapplication-TileColor" content="#e96900" />
           <meta name="msapplication-tap-highlight" content="no" />
-          <meta name="msapplication-TileImage" content="/images/logo.png" />
+          <meta name="msapplication-TileImage" content="/molymath.png" />
           <meta name="theme-color" content="#e96900" />
           <meta
             name="google-site-verification"

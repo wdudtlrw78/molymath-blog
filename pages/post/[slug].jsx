@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 import AppLayout from '../../components/AppLayout';
 import { getAllPosts } from '../../lib/data';
-import { BlogSeo } from '../../components/SEO';
 import { SiteConfig } from '../../config';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
@@ -14,16 +13,12 @@ export default function Blog({ slug, title, content, category, date, corver_imag
   const MDXRemoteContent = MDXRemote(content);
   return (
     <>
-      <BlogSeo
-        title={title}
-        summary={content}
-        date={date}
-        url={`${SiteConfig.url}/category/${slug}`}
-      />
       <Head>
+        <title>{`${title} - ${SiteConfig.title}`}</title>
+        <meta name="description" content={content} />
         <meta property="og:title" content={`${title} - ${SiteConfig.title}`} />
         <meta property="og:description" content={content} />
-        <meta property="og:image" content="/molymath.png" />
+        <meta property="og:image" content={corver_image} />
         <meta property="og:url" content={`https://molymath.kr/post/${slug}`} />
         <meta property="og:type" content="blog" />
       </Head>
@@ -104,4 +99,5 @@ Blog.propTypes = {
   content: PropTypes.object.isRequired,
   category: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
+  corver_image: PropTypes.string.isRequired,
 };

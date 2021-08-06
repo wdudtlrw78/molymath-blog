@@ -1,8 +1,7 @@
 import React from 'react';
+import Head from 'next/head';
 import PropTypes from 'prop-types';
-
 import { SiteConfig } from '../../../config';
-import { PageSeo } from '../../../components/SEO';
 import { useRouter } from 'next/router';
 import AppLayout from '../../../components/AppLayout';
 import { getAllPosts } from '../../../lib/data';
@@ -14,11 +13,14 @@ const IsCategory = ({ posts }) => {
   const { navMenu } = router.query;
   return (
     <>
-      <PageSeo
-        title={navMenu}
-        description={SiteConfig.subtitle}
-        url={`${SiteConfig.url}/category/${navMenu}`}
-      />
+      <Head>
+        <title>{`${navMenu} - ${SiteConfig.title}`}</title>
+        <meta name="description" content={`${navMenu} - ${SiteConfig.title}`} />
+        <meta property="og:title" content={navMenu} />
+        <meta property="og:image" content="/molymath.png" />
+        <meta property="og:url" content={`https://molymath.kr/category/${navMenu}`} />
+        <meta property="og:type" content="blog" />
+      </Head>
 
       <AppLayout>
         <DetailNavMenu posts={posts} />

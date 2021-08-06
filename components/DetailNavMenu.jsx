@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/dist/client/link';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import navData from '../lib/navData';
+import { navData } from '../lib/navData';
 
 const DetailNavMenu = ({ posts }) => {
   const router = useRouter();

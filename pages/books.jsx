@@ -2,17 +2,19 @@ import React from 'react';
 import Head from 'next/head';
 import AppLayout from '../components/AppLayout';
 import { getAllPosts } from '../lib/data';
-import { PageSeo } from '../components/SEO';
 import { SiteConfig } from '../config';
 
 const Books = () => {
   return (
     <>
-      <PageSeo
-        title={`Books - ${SiteConfig.title}`}
-        description={SiteConfig.subtitle}
-        url={`${SiteConfig.url}/books`}
-      />
+      <Head>
+        <title>{`Books - ${SiteConfig.title}`}</title>
+        <meta name="description" content={`Books - ${SiteConfig.title}`} />
+        <meta property="og:title" content={`Books - ${SiteConfig.title}`} />
+        <meta property="og:image" content="/molymath.png" />
+        <meta property="og:url" content={`https://molymath.kr/books`} />
+        <meta property="og:type" content="blog" />
+      </Head>
       <AppLayout>
         <div
           style={{

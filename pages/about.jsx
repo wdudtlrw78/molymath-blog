@@ -1,14 +1,22 @@
 import React from 'react';
-import Link from 'next/link';
+import Head from 'next/head';
 import AppLayout from '../components/AppLayout';
-import { PageSeo } from '../components/SEO';
 import { SiteConfig } from '../config';
 
 const About = () => {
   return (
     <>
+      <Head>
+        <title>{`About - ${SiteConfig.title}`}</title>
+        <meta name="description" content={`About - ${SiteConfig.title}`} />
+        <meta property="og:title" content={`About - ${SiteConfig.title}`} />
+        <meta property="og:image" content="/molymath.png" />
+        <meta property="og:url" content={`https://molymath.kr/about`} />
+        <meta property="og:type" content="blog" />
+      </Head>
       <AppLayout>
-        <h3>Intro</h3>
+        <div style={{ fontSize: '24px' }}>준비 중입니다!!</div>
+        {/* <h3>Intro</h3>
         <div>
           <p>
             블로그 이름은 몰리매스(MolyMath)라고 지었습니다.{' '}
@@ -67,7 +75,7 @@ const About = () => {
           </span>
           <li>Figma</li>
           <li>Slack</li>
-        </ul>
+        </ul> */}
       </AppLayout>
     </>
   );

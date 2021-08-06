@@ -1,17 +1,19 @@
 import React from 'react';
-
+import Head from 'next/head';
 import AppLayout from '../components/AppLayout';
-import { PageSeo } from '../components/SEO';
 import { SiteConfig } from '../config';
 
 const Portfolio = () => {
   return (
     <>
-      <PageSeo
-        title={`Portfolio - ${SiteConfig.title}`}
-        description={SiteConfig.subtitle}
-        url={`${SiteConfig.url}/portfolio`}
-      />
+      <Head>
+        <title>{`Portfolio - ${SiteConfig.title}`}</title>
+        <meta name="description" content={`Portfolio - ${SiteConfig.title}`} />
+        <meta property="og:title" content={`Portfolio - ${SiteConfig.title}`} />
+        <meta property="og:image" content="/molymath.png" />
+        <meta property="og:url" content={`https://molymath.kr/portfolio`} />
+        <meta property="og:type" content="blog" />
+      </Head>
       <AppLayout>
         <div
           style={{

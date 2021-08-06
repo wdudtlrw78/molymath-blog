@@ -1,17 +1,10 @@
 import '../globalStyled.css';
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
-import { DefaultSeo } from 'next-seo';
-
-import { SiteConfig } from '../config';
-import { SEO } from '../components/SEO';
-import Script from 'next/script';
 
 library.add(fab, far);
 
@@ -20,11 +13,11 @@ const MolyMath = ({ Component, pageProps }) => {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>molymath</title>
       </Head>
-      <DefaultSeo {...SEO} />
       <Component {...pageProps} />
-      {process.env.NODE_ENV === 'production' && (
+      {/* {process.env.NODE_ENV === 'production' && (
         <>
           <Script
             async
@@ -43,7 +36,7 @@ const MolyMath = ({ Component, pageProps }) => {
             }}
           />
         </>
-      )}
+      )} */}
     </>
   );
 };

@@ -15,7 +15,6 @@ export default function Blog({ slug, title, content, category, date, corver_imag
     <>
       <Head>
         <title>{`${title} - ${SiteConfig.title}`}</title>
-        <meta name="description" content={content} />
         <meta property="og:title" content={`${title} - ${SiteConfig.title}`} />
         <meta property="og:description" content={content} />
         <meta property="og:image" content={corver_image} />

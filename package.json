@@ -2,6 +2,7 @@
   "name": "blog-molymath",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev -p 3300",
     "build": "next build",
@@ -16,6 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@tailwindcss/typography": "^0.4.1",
     "dayjs": "^1.10.5",
+    "fs": "0.0.1-security",
     "globby": "^12.0.0",
     "gray-matter": "^4.0.3",
     "next": "11.0.1",

@@ -9,30 +9,46 @@ const DetailNavMenu = ({ posts }) => {
   const { navMenu } = router.query;
 
   return (
-    <nav>
-      <li>
-        <Link href="/" prefetch={false}>
-          <a className={router.pathname === '/' ? 'active' : undefined}>
-            All
-            <div>
-              <div>{posts.length}</div>
-            </div>
-          </a>
-        </Link>
-      </li>
-      {navData.map((menu) => (
-        <li key={menu.category}>
-          <Link href={`/category/${menu.category}`} prefetch={false}>
-            <a className={navMenu === menu.category ? 'active' : undefined}>
-              {menu.category}
-              <div>
-                <div>{posts.filter((post) => menu.category === post.category).length}</div>
+    <div className="mb-8 opacity-80 hover:opacity-100">
+      <nav className="w-full grid grid-cols-fill">
+        <li className="flex justify-center items-center py-2">
+          <Link href="/" prefetch={false}>
+            <a
+              className={
+                router.pathname === '/'
+                  ? 'active flex font-normal text-small'
+                  : 'flex font-normal text-small hover:text-main transition-colors'
+              }
+            >
+              All
+              <div className="w-20 h-20 ml-2 bg-white rounded-large shadow text-center">
+                <div className="text-small text-main">{posts.length}</div>
               </div>
             </a>
           </Link>
         </li>
-      ))}
-    </nav>
+        {navData.map((menu) => (
+          <li key={menu.category} className="flex justify-center items-center py-2">
+            <Link href={`/category/${menu.category}`} prefetch={false}>
+              <a
+                className={
+                  navMenu === menu.category
+                    ? 'active flex font-normal text-small'
+                    : 'flex font-normal text-small hover:text-main transition-colors'
+                }
+              >
+                {menu.category}
+                <div className="w-20 h-20 ml-2 bg-white rounded-large shadow text-center">
+                  <div className="text-small">
+                    {posts.filter((post) => menu.category === post.category).length}
+                  </div>
+                </div>
+              </a>
+            </Link>
+          </li>
+        ))}
+      </nav>
+    </div>
   );
 };
 

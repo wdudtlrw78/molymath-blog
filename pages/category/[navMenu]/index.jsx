@@ -21,18 +21,7 @@ const IsCategory = ({ posts }) => {
       />
 
       <AppLayout>
-        <p
-          style={{
-            color: '#e96900',
-            textAlign: 'center',
-            fontSize: '16px',
-            fontWeight: '500',
-          }}
-        >
-          Tag
-        </p>
         <DetailNavMenu posts={posts} />
-
         {posts.map(
           (post) =>
             navMenu === post.category && <PostCard key={post.title} post={post} {...post} />,

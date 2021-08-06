@@ -7,11 +7,6 @@ import { SiteConfig } from '../config';
 const About = () => {
   return (
     <>
-      <PageSeo
-        title={`About - ${SiteConfig.author.name}`}
-        description={`About me - ${SiteConfig.author.name}`}
-        url={`${SiteConfig.url}/about`}
-      />
       <AppLayout>
         <h3>Intro</h3>
         <div>

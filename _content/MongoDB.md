@@ -3,6 +3,7 @@ title: 'MongoDB란?'
 category: 'MongoDB'
 date: '2021-07-05T09:45:27.825Z'
 description: 'MongoDB와 SQL vs NoSQL 서로 장단점에 대해 알아보자!!'
+corver_image: '/images/MongoDB/corver.png'
 ---
 
 ## SQL

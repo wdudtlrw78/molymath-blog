@@ -12,12 +12,6 @@ export const SEO = {
     title: SiteConfig.title,
     description: SiteConfig.subtitle,
   },
-  additionalMetaTags: [
-    {
-      name: 'author',
-      content: SiteConfig.author.name,
-    },
-  ],
 };
 
 export const PageSeo = ({ title, description, url }) => {
@@ -76,12 +70,10 @@ export const BlogSeo = ({ title, summary, date, updatedAt, url, tags, images = [
         ]}
       />
       <ArticleJsonLd
-        authorName={SiteConfig.author.name}
         dateModified={modifiedAt}
         datePublished={publishedAt}
         description={summary}
         images={images}
-        publisherName={SiteConfig.author.name}
         title={title}
         url={url}
         publisherLogo={`${SiteConfig.url}/favicon.ico`}

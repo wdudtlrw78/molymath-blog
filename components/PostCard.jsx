@@ -12,21 +12,23 @@ const PostCard = ({ slug, title, date, category, description }) => {
   const router = useRouter();
   const { navMenu } = router.query;
   return (
-    <div>
+    <div className="group py-12 mx-minus32 border-b flex justify-center items-center flex-col cursor-pointer lg:mx-0">
       <Link href={`/post/${slug}`} prefetch={false}>
         <a>
           <div>
-            <div>
-              <div>{dayjs(date).format('MMM.DD.YYYY')}</div>
+            <div className="flex justify-center">
+              <div className="text-small opacity-80">{dayjs(date).format('MMM.DD.YYYY')}</div>
               {navMenu ? null : (
-                <div>
-                  <span>{category}</span>
+                <div className="flex justify-center items-center w-106 h-6 ml-2 shadow rounded-small">
+                  <span className="text-small opacity-80">{category}</span>
                 </div>
               )}
             </div>
-            <div>
-              <h1>{title}</h1>
-              <div>{description}</div>
+            <div className="text-center">
+              <h1 className="text-title font-semibold group-hover:text-main group-hover:opacity-80 transition-colors my-2">
+                {title}
+              </h1>
+              <p className="text-small opacity-80">{description}</p>
             </div>
           </div>
         </a>

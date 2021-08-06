@@ -3,6 +3,7 @@ title: 'Mongoose populate'
 category: 'MongoDB'
 date: '2021-07-12T12:53:32.116Z'
 description: 'populate 중첩되면 성능 문제가 생길 확률이 커진다!!'
+corver_image: '/images/MongoDB/corver.png'
 ---
 
 몽고DB를 사용하다보면 하나의 다큐먼트가 다른 다큐먼트의 ObjectId를 쓰는 경우가 있습니다. 그럴 때 그 ObjectId를 실제 객체로 치환하는 작업이 필요합니다.

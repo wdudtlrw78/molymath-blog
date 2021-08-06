@@ -3,6 +3,7 @@ title: 'Mongoose 사용하기'
 category: 'MongoDB'
 date: '2021-07-07T06:42:10.246Z'
 description: 'Mongoose와 Schema에 대해 알아보자!!'
+corver_image: '/images/MongoDB/corver.png'
 ---
 
 ## mongoose

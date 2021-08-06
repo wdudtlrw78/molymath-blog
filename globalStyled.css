@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 0 calc(100vw - 100%);
+  color: #344952;
+  line-height: 1.7;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+code {
+  font-family: Noto Sans KR, sans-serif;
+}
+
+a {
+  word-break: break-all;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.active {
+  color: #e96900;
+}
+
+img {
+  border-radius: 8px;
+  width: 100%;
+}

@@ -14,16 +14,6 @@ export default function Home({ posts }) {
     <>
       <PageSeo title={'Home'} description={SiteConfig.subtitle} url={SiteConfig.url} />
       <AppLayout>
-        <p
-          style={{
-            color: '#e96900',
-            textAlign: 'center',
-            fontSize: '16px',
-            fontWeight: '500',
-          }}
-        >
-          Tag
-        </p>
         <DetailNavMenu posts={posts} />
         {posts.map((post) => (
           <PostCard key={post.title} post={post} {...post} />

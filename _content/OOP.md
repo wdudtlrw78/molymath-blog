@@ -3,6 +3,7 @@ title: 'JavaScript 객체지향 프로그래밍'
 category: 'JavaScript'
 date: '2021-07-10T12:21:35.244Z'
 description: 'OOP (Object Oriented Programming)'
+corver_image: '/images/JavaScript/corver.png'
 ---
 
 ## 객체지향 프로그래밍(Object Oriented Programming) 란

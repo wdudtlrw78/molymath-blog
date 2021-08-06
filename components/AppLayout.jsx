@@ -86,7 +86,7 @@ const AppLayout = ({ children }) => {
 
         <div
           onClick={onUpper}
-          className="fixed bottom-12 right-8 text-logo text-sub cursor-pointer p-2 z-40 "
+          className="hidden lg:block lg:fixed lg:bottom-12 lg:right-8 text-logo text-sub cursor-pointer p-2 z-40 "
         >
           <div className="flex justify-center items-center">
             <FontAwesomeIcon icon={faArrowUp} size="2x" />

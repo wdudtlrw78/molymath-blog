@@ -22,12 +22,12 @@ function MobileNav() {
 
   return (
     <>
-      <button type="button" onClick={onToggleNav}>
+      <button type="button" onClick={onToggleNav} className="flex md:hidden">
         <FontAwesomeIcon icon={faBars} className="cursor-pointer text-large text-sub" />
       </button>
       {NavShow && (
         <>
-          <nav className="fixed top-0 right-0 w-72 bg-white h-screen z-75 pt-24 px-6 pb-10">
+          <aside className="fixed top-0 right-0 w-72 bg-white h-screen z-75 pt-24 px-6 pb-10">
             <button
               type="button"
               className="absolute top-6 right-6 text-large hover:text-sub transition-colors"
@@ -58,7 +58,7 @@ function MobileNav() {
                 </a>
               </Link>
             </li>
-          </nav>
+          </aside>
           <div className="fixed top-0 left-0 bg-black w-full h-screen opacity-80 z-50"></div>
         </>
       )}

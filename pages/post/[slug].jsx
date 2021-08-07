@@ -18,7 +18,7 @@ export default function Blog({ slug, title, content, category, date, corver_imag
         <meta property="og:title" content={`${title} - ${SiteConfig.title}`} />
         <meta property="og:description" content={content} />
         <meta property="og:image" content={corver_image} />
-        <meta property="og:url" content={`https://molymath.kr/post/${slug}`} />
+        <meta property="og:url" content={`${SiteConfig.url}/post/${slug}`} />
         <meta property="og:type" content="blog" />
       </Head>
       <AppLayout>

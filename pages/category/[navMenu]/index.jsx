@@ -18,7 +18,7 @@ const IsCategory = ({ posts }) => {
         <meta name="description" content={`${navMenu} - ${SiteConfig.title}`} />
         <meta property="og:title" content={navMenu} />
         <meta property="og:image" content="/molymath.png" />
-        <meta property="og:url" content={`https://molymath.kr/category/${navMenu}`} />
+        <meta property="og:url" content={`${SiteConfig.url}/category/${navMenu}`} />
         <meta property="og:type" content="blog" />
       </Head>
 

@@ -25,7 +25,7 @@ const PostCard = ({ slug, title, date, category, description }) => {
               )}
             </div>
             <div className="text-center">
-              <h1 className="text-title font-semibold group-hover:text-main group-hover:opacity-80 transition-colors my-2">
+              <h1 className="text-title font-bold group-hover:text-main transition-colors my-2">
                 {title}
               </h1>
               <p className="text-small opacity-80">{description}</p>

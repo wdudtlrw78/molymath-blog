@@ -12,7 +12,7 @@ const Books = () => {
         <meta name="description" content={`Books - ${SiteConfig.title}`} />
         <meta property="og:title" content={`Books - ${SiteConfig.title}`} />
         <meta property="og:image" content="/molymath.png" />
-        <meta property="og:url" content={`https://molymath.kr/books`} />
+        <meta property="og:url" content={`${SiteConfig.url}/books`} />
         <meta property="og:type" content="blog" />
       </Head>
       <AppLayout>

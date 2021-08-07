@@ -22,12 +22,13 @@ const AppLayout = ({ children }) => {
   return (
     <>
       <SectionContainer>
+        {/* HEADER */}
         <header className="w-screen bg-white fixed top-0 left-0 z-50 shadow">
           <div className="flex justify-between items-center mx-auto px-4 max-w-4xl h-16">
             <div>
               <Link exact href="/" prefetch={false}>
                 <a>
-                  <h1 className="text-logo text-main text-2xl font-medium">MolyMath</h1>
+                  <h1 className="text-logo text-main text-2xl font-bold">Molymath</h1>
                 </a>
               </Link>
             </div>
@@ -53,10 +54,12 @@ const AppLayout = ({ children }) => {
           </div>
         </header>
 
+        {/* MAIN */}
         <main className="pt-24">
           <div className="p-12 shadow-lg relative">{children}</div>
         </main>
 
+        {/* FOOTER */}
         <footer className="flex justify-between items-center mx-auto max-w-4xl h-16 px-4">
           <div className="font-light text-small">© {today.getFullYear()} | by molymath</div>
           <div className="opacity-60">
@@ -86,7 +89,7 @@ const AppLayout = ({ children }) => {
 
         <div
           onClick={onUpper}
-          className="hidden lg:block lg:fixed lg:bottom-12 lg:right-8 text-logo text-sub cursor-pointer p-2 z-40 "
+          className="hidden lg:block lg:fixed lg:bottom-14 lg:right-24 text-logo text-sub cursor-pointer p-3 z-40 shadow rounded-half"
         >
           <div className="flex justify-center items-center">
             <FontAwesomeIcon icon={faArrowUp} size="2x" />

@@ -11,7 +11,7 @@ const About = () => {
         <meta name="description" content={`About - ${SiteConfig.title}`} />
         <meta property="og:title" content={`About - ${SiteConfig.title}`} />
         <meta property="og:image" content="/molymath.png" />
-        <meta property="og:url" content={`https://molymath.kr/about`} />
+        <meta property="og:url" content={`${SiteConfig.url}/about`} />
         <meta property="og:type" content="blog" />
       </Head>
       <AppLayout>

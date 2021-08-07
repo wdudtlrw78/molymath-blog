@@ -11,7 +11,7 @@ const Portfolio = () => {
         <meta name="description" content={`Portfolio - ${SiteConfig.title}`} />
         <meta property="og:title" content={`Portfolio - ${SiteConfig.title}`} />
         <meta property="og:image" content="/molymath.png" />
-        <meta property="og:url" content={`https://molymath.kr/portfolio`} />
+        <meta property="og:url" content={`${SiteConfig.url}/portfolio`} />
         <meta property="og:type" content="blog" />
       </Head>
       <AppLayout>

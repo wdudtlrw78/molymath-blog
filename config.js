@@ -1,6 +1,6 @@
 export const SiteConfig = {
   url: 'https://molymath.kr',
-  title: 'molymath',
-  subtitle: 'molymath',
+  title: 'Molymath',
+  subtitle: 'Molymath',
   googleAnalyticsId: 'G-KZJVXD8S43',
 };

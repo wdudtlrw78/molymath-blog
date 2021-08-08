@@ -16,7 +16,6 @@ export default function Home({ posts }) {
           name="description"
           content="웹개발과 책 서평등 학습하고 공유하는 MolyMath 온라인 블로그입니다. 감사합니다."
         />
-        <meta name="description" content={`${SiteConfig.title}`} />
         <meta property="og:title" content={`${SiteConfig.title}`} />
         <meta
           property="og:description"
@@ -36,6 +35,7 @@ export default function Home({ posts }) {
   );
 }
 
+// pre-renderring
 export async function getStaticProps() {
   const allPosts = getAllPosts();
 

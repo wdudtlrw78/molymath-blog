@@ -1,5 +1,6 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { SiteConfig } from '../config';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -29,7 +30,7 @@ class MyDocument extends Document {
             content="pk9mHtTQUcYfF6rk5vwTMJz8VCoKG4wxFv1Vv8gWwyQ"
           />
           <meta name="naver-site-verification" content="6d26034b57c80e788b4eac151c8988953bb1ae57" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href={`${SiteConfig.url}/favicon.ico`} />
           <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet"

@@ -21,8 +21,9 @@ const MolyMath = ({ Component, pageProps }) => {
           content="웹개발과 책 서평등 학습하고 공유하는 MolyMath 온라인 블로그입니다. 감사합니다."
         />
         <meta name="description" content={`${SiteConfig.title}`} />
+        <meta property="og:title" content={`${SiteConfig.title}`} />
         <meta
-          property="og:title"
+          property="og:description"
           content="웹개발과 책 서평등 학습하고 공유하는 MolyMath 온라인 블로그입니다. 감사합니다."
         />
         <meta property="og:image" content="/molymath.png" />

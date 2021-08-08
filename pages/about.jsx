@@ -15,7 +15,7 @@ const About = () => {
         <meta property="og:type" content="blog" />
       </Head>
       <AppLayout>
-        <div style={{ fontSize: '24px' }}>준비 중입니다!!</div>
+        <div style={{ fontSize: '24px', textAlign: 'center' }}>준비 중입니다!!</div>
         {/* <h3>Intro</h3>
         <div>
           <p>

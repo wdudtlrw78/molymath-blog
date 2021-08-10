@@ -68,7 +68,10 @@ function MobileNav() {
               </li>
             </ul>
           </aside>
-          <div className="fixed top-0 left-0 bg-black w-full h-screen opacity-80 z-50"></div>
+          <div
+            onClick={onToggleNav}
+            className="fixed top-0 left-0 bg-black w-full h-screen opacity-80 z-50"
+          ></div>
         </>
       )}
     </>

@@ -60,7 +60,7 @@ const AppLayout = ({ children }) => {
         </main>
 
         {/* FOOTER */}
-        <footer className="flex justify-between items-center mx-auto max-w-4xl h-16 px-4">
+        <footer className="flex justify-between items-center mx-auto max-w-4xl my-4 h-16 px-4">
           <div className="font-light text-small">© {today.getFullYear()} | by molymath</div>
           <div className="opacity-60">
             <Link href="mailto:wdudtlrw78@gmail.com" prefetch={false}>

@@ -5,11 +5,10 @@ import Head from 'next/head';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
-import { SiteConfig } from '../config';
 
 library.add(fab, far);
 
-const MolyMath = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -17,33 +16,13 @@ const MolyMath = ({ Component, pageProps }) => {
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       </Head>
       <Component {...pageProps} />
-      {/* {process.env.NODE_ENV === 'production' && (
-        <>
-          <Script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${SiteConfig.googleAnalyticsId}`}
-          />
-          <Script
-            dangerouslySetInnerHTML={{
-              __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', '${SiteConfig.googleAnalyticsId}', {
-            page_path: window.location.pathname,
-            `,
-            }}
-          />
-        </>
-      )} */}
     </>
   );
 };
 
-MolyMath.propTypes = {
+MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
   pageProps: PropTypes.object.isRequired,
 };
 
-export default MolyMath;
+export default MyApp;

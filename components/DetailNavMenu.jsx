@@ -12,7 +12,7 @@ const DetailNavMenu = ({ posts }) => {
     <div className="mb-8 opacity-80 hover:opacity-100">
       <nav className="w-full grid grid-cols-fill">
         <li className="flex justify-center items-center py-2">
-          <Link href="/" prefetch={false}>
+          <Link href="/">
             <a
               className={
                 router.pathname === '/'

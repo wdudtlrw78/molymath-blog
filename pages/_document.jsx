@@ -25,9 +25,9 @@ class MyDocument extends Document {
           <meta name="msapplication-tap-highlight" content="no" />
           <meta name="msapplication-TileImage" content="/molymath.png" />
           <meta name="theme-color" content="#e96900" />
-          <link rel="icon" href={`${SiteConfig.url}/favicon.ico`} />
+          <link rel="icon" href="/molymath.png" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family1=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet"
           />
         </Head>

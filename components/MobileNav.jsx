@@ -37,7 +37,7 @@ function MobileNav() {
 
             <ul>
               <li className="p-4 text-small font-light hover:text-main cursor-pointer transition-colors">
-                <Link href="/about" prefetch={false}>
+                <Link href="/about">
                   <a
                     className={router.pathname === '/about' ? 'active' : null}
                     onClick={onToggleNav}
@@ -47,7 +47,7 @@ function MobileNav() {
                 </Link>
               </li>
               <li className="p-4 text-small font-light hover:text-main cursor-pointer transition-colors">
-                <Link href="/portfolio" prefetch={false}>
+                <Link href="/portfolio">
                   <a
                     className={router.pathname === '/portfolio' ? 'active' : null}
                     onClick={onToggleNav}
@@ -57,7 +57,7 @@ function MobileNav() {
                 </Link>
               </li>
               <li className="pt-4 pl-4 pb-4 text-small font-light hover:text-main cursor-pointer transition-colors">
-                <Link href="/books" prefetch={false}>
+                <Link href="/books">
                   <a
                     className={router.pathname === '/books' ? 'active' : null}
                     onClick={onToggleNav}

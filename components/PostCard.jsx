@@ -12,7 +12,7 @@ const PostCard = ({ slug, title, date, category, description }) => {
   const router = useRouter();
   const { navMenu } = router.query;
   return (
-    <div className="group py-12 mx-minus32 border-b flex justify-center items-center flex-col cursor-pointer lg:mx-0">
+    <article className="group py-12 mx-minus32 border-b flex justify-center items-center flex-col cursor-pointer lg:mx-0">
       <Link href={`/post/${slug}`} prefetch={false}>
         <a>
           <div>
@@ -33,7 +33,7 @@ const PostCard = ({ slug, title, date, category, description }) => {
           </div>
         </a>
       </Link>
-    </div>
+    </article>
   );
 };
 

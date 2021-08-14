@@ -3,7 +3,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import PostCard from '../components/PostCard';
 import DetailNavMenu from '../components/DetailNavMenu';
-import { getAllPosts } from '../lib/data';
+import { getAllPosts } from '../lib/data.js';
 import AppLayout from '../components/AppLayout';
 import { SiteConfig } from '../config';
 

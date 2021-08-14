@@ -26,7 +26,7 @@ const AppLayout = ({ children }) => {
         <header className="w-screen bg-white fixed top-0 left-0 z-50 shadow">
           <div className="flex justify-between items-center mx-auto px-4 max-w-4xl h-16">
             <div>
-              <Link exact href="/" prefetch={false}>
+              <Link exact href="/">
                 <a>
                   <h1 className="text-logo text-main text-2xl font-bold">Molymath</h1>
                 </a>
@@ -35,17 +35,17 @@ const AppLayout = ({ children }) => {
 
             <ul className="hidden md:flex">
               <li className="p-4 text-small font-light hover:text-main cursor-pointer transition-colors">
-                <Link href="/about" prefetch={false}>
+                <Link href="/about">
                   <a className={router.pathname === '/about' ? 'active' : null}>About</a>
                 </Link>
               </li>
               <li className="p-4 text-small font-light hover:text-main cursor-pointer transition-colors">
-                <Link href="/portfolio" prefetch={false}>
+                <Link href="/portfolio">
                   <a className={router.pathname === '/portfolio' ? 'active' : null}>Portfolio</a>
                 </Link>
               </li>
               <li className="pt-4 pl-4 pb-4 text-small font-light hover:text-main cursor-pointer transition-colors">
-                <Link href="/books" prefetch={false}>
+                <Link href="/books">
                   <a className={router.pathname === '/books' ? 'active' : null}>Books</a>
                 </Link>
               </li>
@@ -63,18 +63,18 @@ const AppLayout = ({ children }) => {
         <footer className="flex justify-between items-center mx-auto max-w-4xl my-4 h-16 px-4">
           <div className="font-light text-small">© {today.getFullYear()} | by molymath</div>
           <div className="opacity-60">
-            <Link href="mailto:wdudtlrw78@gmail.com" prefetch={false}>
+            <Link href="mailto:wdudtlrw78@gmail.com">
               <a className="px-2 hover:text-main">
                 <FontAwesomeIcon className="instagram" icon={faEnvelope} size="lg" />
               </a>
             </Link>
-            <Link href="https://github.com/wdudtlrw78" prefetch={false}>
+            <Link href="https://github.com/wdudtlrw78">
               <a className="px-2 hover:text-main" target="_blank" rel="noreferrer noopener">
                 <FontAwesomeIcon className="github" icon={faGithub} size="lg" />
               </a>
             </Link>
 
-            <Link href="https://www.instagram.com/mosik_2" prefetch={false}>
+            <Link href="https://www.instagram.com/mosik_2">
               <a
                 className="px-2 hover:text-main"
                 target="_blank"

@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import AppLayout from '../components/AppLayout';
 import { SiteConfig } from '../config';
+import { getAllPosts } from '../lib/data';
 
 const Portfolio = () => {
   return (
@@ -28,5 +29,20 @@ const Portfolio = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const allPosts = getAllPosts();
+
+  return {
+    props: {
+      posts: allPosts.map(({ data, content, slug }) => ({
+        ...data,
+        date: data.date,
+        content,
+        slug,
+      })),
+    },
+  };
+}
 
 export default Portfolio;

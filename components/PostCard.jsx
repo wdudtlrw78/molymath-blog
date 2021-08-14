@@ -13,7 +13,7 @@ const PostCard = ({ slug, title, date, category, description }) => {
   const { navMenu } = router.query;
   return (
     <article className="group py-12 mx-minus32 border-b flex justify-center items-center flex-col cursor-pointer lg:mx-0">
-      <Link href={`/post/${slug}`} prefetch={false}>
+      <Link href={`/post/${slug}`}>
         <a>
           <div>
             <div className="flex justify-center">

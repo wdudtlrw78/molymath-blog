@@ -2,7 +2,7 @@
 title: 'Access-Control-Allow-Origin'
 category: 'NodeJS'
 date: '2021-08-18T08:14:05.385Z'
-description: 'CORS, CORB 요청 혀용하기'
+description: 'CORS 요청 혀용하기'
 corver_image: '/images/NodeJS/corver.png'
 ---
 

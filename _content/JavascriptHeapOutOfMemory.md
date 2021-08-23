@@ -1,5 +1,5 @@
 ---
-title: 'JavaScript heap out of memory 에러 해결'
+title: '[Error] JavaScript heap out of memory'
 category: 'React'
 date: '2021-08-15T05:39:02.989Z'
 description: '허무한 재귀 발생'

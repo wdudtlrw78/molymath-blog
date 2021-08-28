@@ -14,6 +14,8 @@ To fix, cancel all subscriptions and asynchronous tasks in a useEffect cleanup
 
 > 언마운트된 컴포넌트에서는 상태를 추적할 수 없고, 상태를 추적하지 않기에 작업이 수행되지는 않지만, 메모리 누수가 발생할 수 있으니, useEffect의 cleanup 함수를 이용해라
 
+</br>
+
 ### 에러 코드
 
 - 아래 코드는 sortByBox 모달창이 오픈됬을 때 sortButton 제외한 아무곳이나 클릭 했을 때 Close 하게 만들려고하던 코드입니다.
@@ -38,6 +40,8 @@ useEffect(() => {
 }, []);
 ```
 
+</br>
+
 ### 원인
 
 - 위의 에러 코드는 removeEventListener를 제데로 동작시킬 수 없는 구조이다.
@@ -45,6 +49,8 @@ useEffect(() => {
 - addEventListener, removeEventListener 두 함수는 입력된 함수의 레퍼런스를 기준으로 등록하고 해제해야한다.
 
 - removeEventListener 해제를 하지 않으면 렌더링될 때마다 addEventListener가 계속 실행되어서 메모리 누수 현상이 일어난다.
+
+</br>
 
 ### 해결
 
@@ -63,6 +69,8 @@ useEffect(() => {
 }, []);
 ```
 
+</br>
+
 ### 다른 케이스
 
 - dependency를 제대로 넣자
@@ -72,6 +80,8 @@ useEffect(() => {
 - router 이동 후, 이동 전 컴포넌트에서 state를 바꾸려는 시도가 있을 때
 
 - 비동기 처리 과정
+
+</br>
 
 ### 참고자료
 

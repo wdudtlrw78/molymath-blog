@@ -10,6 +10,8 @@ corver_image: '/images/NodeJS/corver.png'
 
 ![CORS](/images/NodeJS/cors.png)
 
+</br>
+
 ### 원인
 
 개발자 도구(F12)키 눌러서 Network탭 해당 Headers에 Access-Control-Allow-Origin가 있어야 되는데 없어서 에러 발생
@@ -17,6 +19,8 @@ corver_image: '/images/NodeJS/corver.png'
 브라우저 (localhost:3400)가 다른 도메인으로 백엔드 서버(express)(localhost:3410) 요청을 보내면 `브라우저가 차단`해버립니다. (CORS)
 프론트 서버에서 즉 서버에서 서버로 요청했을 때는 CORS가 안생깁니다.
 브라우저에서 다른 도메인 서버로 보냈을때만 CORS가 생깁니다.
+
+</br>
 
 ### 해결 1
 
@@ -68,6 +72,8 @@ axios.post('http://localhost:3410/api/users/register) 3400(프론트)이 3410(�
 - 이때 axios.post('/api/users/register') 설정해야 3410가 3410로 보낸 것처럼 취급을 한다.
 
 - 백엔드와 프론트가 서로 localhost로 설정되야 사용할 수 있다. 백엔드 서버가 실제 돌아가는 서버는 적용할 수 없다.
+
+</br>
 
 ### 해결 2
 

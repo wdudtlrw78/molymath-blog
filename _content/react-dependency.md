@@ -1,5 +1,5 @@
 ---
-title: '[React] 부모로부터 받은 state, props는 dependency array에 넣자!! '
+title: '[React] 부모로부터 받은 state, props는 dependency array에 넣어야하는 이유'
 category: 'React'
 date: '2021-09-03T14:18:19.819Z'
 description: ''
@@ -66,7 +66,7 @@ return (
 );
 ```
 
-아래의 코드는 부모로부터 물려받은 props를 useCallback dependency안에 넣어주지 않아서 컴포넌트들이 리렌더링 된다해도 자식컴포넌트들은 참조가 안되어 호출하지 않았다.
+아래의 코드는 부모로부터 물려받은 props를 useCallback dependency안에 넣어주지 않아서 컴포넌트들이 리렌더링 된다해도 자식컴포넌트들은 handleFilters 함수에 참조가 안되어 호출하지 안았던 이유이다.
 
 ```jsx
 // CategoryBox
@@ -93,8 +93,6 @@ function CategoryBox({ list, handleFilters }) {
     [Checked],
   );
 ```
-
-<br />
 
 그래서 물려받은 props를 dependency안에 `[handleFilters]` 넣어줬더니 참조가 되어 리렌더링 후에도 호출되도록 해결하였다.
 

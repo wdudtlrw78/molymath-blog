@@ -15,6 +15,8 @@ corver_image: '/images/MongoDB/corver.png'
 ObjectId는 하나의 document 내에서 유일함이 보장되는 12 byte binary data입니다. 그리고 MongoDB 자체에서 자동으로 넣어주는 고유 값이기에, Object를 통해 다른 컬렉션에 있는 데이터를 참조할 수 있습니다.
 즉, 특정 collection에서 populate 메소드를 이용하면 ObjectId를 기반으로 다른 collection의 정보들을 함께 담아서 출력 할 수 있습니다.
 
+<br />
+
 ## mongoose.Schema
 
 ```js
@@ -36,6 +38,8 @@ const productSchema = mongoose.Schema(
 
 먼저 populate를 사용하기 위해서 스키마 정의 시 type을 _mongoose.SchemaTypes.ObjectId_ 로 지정해줘야 합니다. 또한 ref(참조)에는 해당 ObjectId를 가지고 어떤 모델을 참조할 것인지를 지정해줘야 하기에, 회원가입된 유저들에 대한 데이터가 담겨있는 'User'을 참조할 것이라서 지정해 주었습니다.
 
+<br />
+
 ## Product Info
 
 위의 사진은 상품 등록에대한 db입니다. writer에는 상품을 누가 등록했는지에 대한 정보들이 들어있습니다. 하지만 ObjectId가 필요한게 아니라 치환해서 이름, 이미지, 이메일주소 등 필요하기 때문에 populate 기능을 사용합니다.
@@ -52,6 +56,8 @@ Product.find()
 ![populate {priority}{513x118}](/images/MongoDB/populate.JPG)
 
 ![populate {priority}{521x191}](/images/MongoDB/populatedetail.JPG)
+
+<br />
 
 ## 주의할 점
 

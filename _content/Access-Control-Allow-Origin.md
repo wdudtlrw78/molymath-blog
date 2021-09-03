@@ -10,7 +10,7 @@ corver_image: '/images/NodeJS/corver.png'
 
 ![CORS](/images/NodeJS/cors.png)
 
-</br>
+<br />
 
 ### 원인
 
@@ -20,7 +20,7 @@ corver_image: '/images/NodeJS/corver.png'
 프론트 서버에서 즉 서버에서 서버로 요청했을 때는 CORS가 안생깁니다.
 브라우저에서 다른 도메인 서버로 보냈을때만 CORS가 생깁니다.
 
-</br>
+<br />
 
 ### 해결 1
 
@@ -73,7 +73,7 @@ axios.post('http://localhost:3410/api/users/register) 3400(프론트)이 3410(�
 
 - 백엔드와 프론트가 서로 localhost로 설정되야 사용할 수 있다. 백엔드 서버가 실제 돌아가는 서버는 적용할 수 없다.
 
-</br>
+<br />
 
 ### 해결 2
 

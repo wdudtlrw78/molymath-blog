@@ -14,7 +14,7 @@ To fix, cancel all subscriptions and asynchronous tasks in a useEffect cleanup
 
 > 언마운트된 컴포넌트에서는 상태를 추적할 수 없고, 상태를 추적하지 않기에 작업이 수행되지는 않지만, 메모리 누수가 발생할 수 있으니, useEffect의 cleanup 함수를 이용해라
 
-</br>
+<br />
 
 ### 에러 코드
 
@@ -40,7 +40,7 @@ useEffect(() => {
 }, []);
 ```
 
-</br>
+<br />
 
 ### 원인
 
@@ -50,7 +50,7 @@ useEffect(() => {
 
 - removeEventListener 해제를 하지 않으면 렌더링될 때마다 addEventListener가 계속 실행되어서 메모리 누수 현상이 일어난다.
 
-</br>
+<br />
 
 ### 해결
 
@@ -69,7 +69,7 @@ useEffect(() => {
 }, []);
 ```
 
-</br>
+<br />
 
 ### 다른 케이스
 
@@ -81,7 +81,7 @@ useEffect(() => {
 
 - 비동기 처리 과정
 
-</br>
+<br />
 
 ### 참고자료
 

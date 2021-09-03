@@ -6,7 +6,7 @@ description: ''
 corver_image: '/images/React/corver.png'
 ---
 
-상황은 checkbox와 radio button들을 통해서 해당하는 값을 filtering하는 중이였다.
+상황은 checkbox와 radio button들을 통해서 해당하는 값을 filtering하는 중이었다.
 
 ```jsx
 const [Filters, setFilters] = useState({

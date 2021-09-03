@@ -1,5 +1,5 @@
 ---
-title: '[React] 부모로부터 받은 state, props는 dependency array에 넣어야하는 이유'
+title: '[React] 부모로부터 받은 state, props를 dependency array에 넣어야하는 이유'
 category: 'React'
 date: '2021-09-03T14:18:19.819Z'
 description: ''

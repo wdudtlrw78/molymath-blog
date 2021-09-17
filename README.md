@@ -1,6 +1,6 @@
 # MolyMath Blog
 
-## Tech
+### Tech
 
 - Next.Js(SSR)
 - React Hooks
@@ -28,7 +28,7 @@ https://www.figma.com/proto/3JmgbuLpka5ZecDH9sJa41/Prototyping-in-Figma?node-id=
 
 <br>
 
-## Frontmatter
+### Frontmatter
 
 ```h
 ---
@@ -39,3 +39,21 @@ description: '이벤트 기초'
 corver_image: '/images/JavaScript/corver.png'
 ---
 ```
+
+<br />
+
+### Functions 추가 예정
+
+- [] sitemap.xml (검색엔진 노출)
+
+- [] infinite scrolling or pagination
+
+- [] login / register (server)
+
+- [] posts comment
+
+- [] previous, next post
+
+- [] drak mode
+
+- [] search

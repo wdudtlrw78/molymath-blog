@@ -45,7 +45,7 @@ module.exports = {
         106: '6.625rem',
       },
       gridTemplateColumns: {
-        fill: 'repeat(auto-fill, minmax(192px, 1fr))',
+        fill: 'repeat(auto-fill, minmax(92px, 2fr))',
       },
       typography: (theme) => ({
         DEFAULT: {

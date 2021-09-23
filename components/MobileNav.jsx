@@ -70,7 +70,7 @@ function MobileNav() {
           </aside>
           <div
             onClick={onToggleNav}
-            className="fixed top-0 left-0 bg-black w-full h-screen opacity-80 z-50"
+            className="fixed top-0 left-0 bg-black w-full h-screen opacity-80 z-50 cursor-pointer"
           ></div>
         </>
       )}

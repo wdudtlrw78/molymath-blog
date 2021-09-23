@@ -44,16 +44,16 @@ corver_image: '/images/JavaScript/corver.png'
 
 ### Functions 추가 예정
 
-- [] sitemap.xml (검색엔진 노출)
+- [ ] sitemap.xml (검색엔진 노출)
 
-- [] infinite scrolling or pagination
+- [ ] infinite scrolling or pagination
 
-- [] login / register (server)
+- [ ] login / register (server)
 
-- [] posts comment
+- [ ] posts comment
 
-- [] previous, next post
+- [ ] previous, next post
 
-- [] drak mode
+- [ ] drak mode
 
-- [] search
+- [ ] search

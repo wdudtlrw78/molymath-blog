@@ -11,7 +11,7 @@ const DetailNavMenu = ({ posts }) => {
   return (
     <div className="mb-8 opacity-80 hover:opacity-100">
       <nav className="w-full grid grid-cols-fill">
-        <li className="flex justify-center items-center py-2">
+        <li className="flex justify-center items-center py-4">
           <Link href="/">
             <a
               className={
@@ -28,7 +28,7 @@ const DetailNavMenu = ({ posts }) => {
           </Link>
         </li>
         {navData.map((menu) => (
-          <li key={menu.category} className="flex justify-center items-center py-2">
+          <li key={menu.category} className="flex justify-center items-center py-4">
             <Link href={`/category/${menu.category}`} prefetch={false}>
               <a
                 className={

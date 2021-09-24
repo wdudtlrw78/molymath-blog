@@ -22,7 +22,7 @@ const DetailNavMenu = ({ posts }) => {
             >
               All
               <div className="w-20 h-20 ml-2 bg-white rounded-large shadow text-center">
-                <div className="text-small text-main">{posts.length}</div>
+                <div className="text-small">{posts.length}</div>
               </div>
             </a>
           </Link>

@@ -37,32 +37,26 @@ function MobileNav() {
 
             <ul>
               <li className="p-4 text-small font-light hover:text-main cursor-pointer transition-colors">
-                <Link href="/about">
-                  <a
-                    className={router.pathname === '/about' ? 'active' : null}
-                    onClick={onToggleNav}
-                  >
-                    About
+                <Link href="https://www.notion.so/mong88/f1e9afc15a204947837d3e776a239834">
+                  <a a target="_blank" rel="noreferrer noopener" onClick={onToggleNav}>
+                    Resume
                   </a>
                 </Link>
               </li>
               <li className="p-4 text-small font-light hover:text-main cursor-pointer transition-colors">
-                <Link href="/portfolio">
-                  <a
-                    className={router.pathname === '/portfolio' ? 'active' : null}
-                    onClick={onToggleNav}
-                  >
-                    Portfolio
-                  </a>
-                </Link>
-              </li>
-              <li className="pt-4 pl-4 pb-4 text-small font-light hover:text-main cursor-pointer transition-colors">
                 <Link href="/books">
                   <a
                     className={router.pathname === '/books' ? 'active' : null}
                     onClick={onToggleNav}
                   >
                     Books
+                  </a>
+                </Link>
+              </li>
+              <li className="pt-4 pl-4 pb-4 text-small font-light hover:text-main cursor-pointer transition-colors">
+                <Link href="https://github.com/wdudtlrw78/molymath-blog/issues/1">
+                  <a target="_blank" rel="noreferrer noopener" onClick={onToggleNav}>
+                    블로그 건의하기
                   </a>
                 </Link>
               </li>

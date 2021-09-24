@@ -35,18 +35,22 @@ const AppLayout = ({ children }) => {
 
             <ul className="hidden md:flex">
               <li className="p-4 text-small font-light hover:text-main cursor-pointer transition-colors">
-                <Link href="/about">
-                  <a className={router.pathname === '/about' ? 'active' : null}>About</a>
+                <Link href="https://www.notion.so/mong88/f1e9afc15a204947837d3e776a239834">
+                  <a target="_blank" rel="noreferrer noopener">
+                    Resume
+                  </a>
                 </Link>
               </li>
               <li className="p-4 text-small font-light hover:text-main cursor-pointer transition-colors">
-                <Link href="/portfolio">
-                  <a className={router.pathname === '/portfolio' ? 'active' : null}>Portfolio</a>
+                <Link href="/books">
+                  <a className={router.pathname === '/books' ? 'active' : null}>Books</a>
                 </Link>
               </li>
               <li className="pt-4 pl-4 pb-4 text-small font-light hover:text-main cursor-pointer transition-colors">
-                <Link href="/books">
-                  <a className={router.pathname === '/books' ? 'active' : null}>Books</a>
+                <Link href="https://github.com/wdudtlrw78/molymath-blog/issues/1">
+                  <a target="_blank" rel="noreferrer noopener">
+                    블로그 건의하기
+                  </a>
                 </Link>
               </li>
             </ul>

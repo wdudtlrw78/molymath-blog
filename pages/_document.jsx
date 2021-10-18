@@ -25,6 +25,8 @@ class MyDocument extends Document {
           <meta name="msapplication-TileImage" content="/molymath.png" />
           <meta name="theme-color" content="#e96900" />
           <link rel="icon" href="/molymath.png" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet"

@@ -23,7 +23,7 @@ const Books = () => {
             alignContent: 'center',
           }}
         >
-          <div style={{ fontSize: '24px' }}>준비 중입니다!!</div>
+          <h1 className="text-large dark:text-mainDark">준비 중입니다!!</h1>
         </div>
       </AppLayout>
     </>

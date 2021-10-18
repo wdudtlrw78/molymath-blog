@@ -27,33 +27,33 @@ function MobileNav() {
 
       {NavShow && (
         <>
-          <aside className="fixed top-0 right-0 w-72 bg-white h-screen z-75 pt-24 px-6 pb-10">
+          <aside className="fixed top-0 right-0 w-72 bg-white h-screen z-75 pt-24 px-6 pb-10 dark:bg-dark-bg">
             <button
               type="button"
-              className="absolute top-6 right-6 text-large hover:text-sub transition-colors"
+              className="absolute top-6 right-6 text-large hover:text-sub transition-colors dark:text-white dark:hover:text-sub"
             >
               <FontAwesomeIcon icon={faTimes} onClick={onToggleNav} />
             </button>
 
             <ul>
-              <li className="p-4 text-small font-light hover:text-main cursor-pointer transition-colors">
+              <li className="p-4 text-small font-light hover:text-main cursor-pointer transition-colors dark:text-subDark dark:hover:text-sub">
                 <Link href="https://www.notion.so/mong88/f1e9afc15a204947837d3e776a239834">
                   <a a target="_blank" rel="noreferrer noopener" onClick={onToggleNav}>
                     Resume
                   </a>
                 </Link>
               </li>
-              <li className="p-4 text-small font-light hover:text-main cursor-pointer transition-colors">
+              <li className="p-4 text-small font-light hover:text-main cursor-pointer transition-colors dark:text-subDark dark:hover:text-sub">
                 <Link href="/books">
                   <a
-                    className={router.pathname === '/books' ? 'active' : null}
+                    className={router.pathname === '/books' ? 'active dark:text-sub' : null}
                     onClick={onToggleNav}
                   >
                     Books
                   </a>
                 </Link>
               </li>
-              <li className="pt-4 pl-4 pb-4 text-small font-light hover:text-main cursor-pointer transition-colors">
+              <li className="pt-4 pl-4 pb-4 text-small font-light hover:text-main cursor-pointer transition-colors dark:text-subDark dark:hover:text-sub">
                 <Link href="https://github.com/wdudtlrw78/molymath-blog/issues/1">
                   <a target="_blank" rel="noreferrer noopener" onClick={onToggleNav}>
                     블로그 건의하기

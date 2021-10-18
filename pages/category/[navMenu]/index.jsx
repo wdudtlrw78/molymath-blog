@@ -33,8 +33,6 @@ const IsCategory = ({ posts }) => {
   );
 };
 
-export default IsCategory;
-
 export async function getStaticProps() {
   const allPosts = getAllPosts();
   return {
@@ -63,3 +61,5 @@ export async function getStaticPaths() {
 IsCategory.propTypes = {
   posts: PropTypes.array.isRequired,
 };
+
+export default IsCategory;

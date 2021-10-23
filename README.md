@@ -38,4 +38,4 @@ corver_image: '/images/JavaScript/corver.png'
 
 - [ ] previous, next post
 
-- [ ] drak mode
+- [ x ] drak mode

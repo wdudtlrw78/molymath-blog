@@ -44,7 +44,7 @@ useEffect(() => {
 
 ### 원인
 
-- 위의 에러 코드는 removeEventListener를 제데로 동작시킬 수 없는 구조이다.
+- 위의 에러 코드는 removeEventListener를 제대로 동작시킬 수 없는 구조이다.
 
 - addEventListener, removeEventListener 두 함수는 입력된 함수의 레퍼런스를 기준으로 등록하고 해제해야한다.
 
